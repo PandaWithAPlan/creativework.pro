@@ -300,9 +300,33 @@
     <section id="home-contact" class="section home-contact">
       <div class="container">
         <h2>Получайте свежие идеи каждую неделю</h2>
-        <p class="section-subtitle">Placeholder для формы подписки и краткой контактной информации.</p>
+        <p class="section-subtitle">Подборка лучших материалов из комьюнити и блога раз в неделю — без спама и лишнего шума.</p>
         <div class="home-contact-grid">
-          <!-- Левая колонка: форма подписки, правая: краткие контакты/CTA "Заказать консалтинг" -->
+          <div class="home-contact-left">
+            <h3>Подписка на дайджест</h3>
+            <form id="newsletter-form" class="newsletter-form" action="#" method="post">
+              <label for="newsletter-email">Email</label>
+              <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" required>
+              <label for="newsletter-role">Чем вы занимаетесь?</label>
+              <select id="newsletter-role" name="role">
+                <option value="designer">Дизайн / Иллюстрация</option>
+                <option value="photo-video">Фото / Видео</option>
+                <option value="architecture">Архитектура / Интерьер</option>
+                <option value="crafts">Ремёсла / Handmade</option>
+                <option value="music">Музыка / Аудио</option>
+                <option value="writing">Письмо / Контент</option>
+                <option value="other">Другое</option>
+              </select>
+              <button type="submit" class="btn btn-primary">Подписаться</button>
+              <p class="form-note">Нажимая на кнопку, вы соглашаетесь с <a href="privacy.html">Политикой конфиденциальности</a>.</p>
+            </form>
+          </div>
+          <div class="home-contact-right">
+            <h3>Нужен персональный диалог?</h3>
+            <p>Для вопросов о консалтинге, партнёрствах или медиа‑запросах напишите нам напрямую или заполните форму на странице контактов.</p>
+            <p><strong>Email:</strong> <a href="mailto:hello@creativeworkhub.io">hello@creativeworkhub.io</a></p>
+            <a href="contact.html#contact-forms" class="btn btn-secondary">Перейти к формам</a>
+          </div>
         </div>
       </div>
     </section>
