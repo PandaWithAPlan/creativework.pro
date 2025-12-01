@@ -34,7 +34,7 @@
     <section class="section page-hero">
       <div class="container">
         <h1>Свяжитесь с нами</h1>
-        <p>Страница контактов для разных типов запросов: общие вопросы, консалтинг, партнёрство, пресса.</p>
+        <p>Выберите формат: общий вопрос, запрос на консалтинг, партнёрство или прессу. Мы обычно отвечаем в течение 24 часов (CET).</p>
       </div>
     </section>
 
@@ -44,8 +44,9 @@
         <h2>Контактная информация</h2>
         <div class="contact-grid">
           <div class="contact-details">
-            <p><strong>Email:</strong> hello@creativeworkhub.io (ответ в течение 24 часов)</p>
-            <p><strong>Телефон:</strong> +49 30 XXX XXXX (Берлин, CET)</p>
+            <p><strong>Email для общих вопросов:</strong> <a href="mailto:hello@creativeworkhub.io">hello@creativeworkhub.io</a></p>
+            <p><strong>Email для партнёрств и прессы:</strong> <a href="mailto:partners@creativeworkhub.io">partners@creativeworkhub.io</a></p>
+            <p><strong>Телефон (HQ):</strong> +49 30 XXX XXXX (Берлин, CET)</p>
           </div>
           <div class="contact-offices">
             <h3>Офисы</h3>
@@ -65,12 +66,63 @@
         <div class="home-contact-grid">
           <div class="contact-form-wrapper">
             <h2>Общая контактная форма</h2>
-            <!-- Здесь позже будет реальная форма с id=contact-form -->
-            <p>Placeholder: форма с полями Имя, Email, Телефон, Компания, Сообщение + тема запроса.</p>
+            <form id="contact-form" class="contact-form" action="api/contact.php" method="post">
+              <label for="contact-name">Имя*</label>
+              <input type="text" id="contact-name" name="name" placeholder="Ваше имя" required>
+
+              <label for="contact-email">Email*</label>
+              <input type="email" id="contact-email" name="email" placeholder="you@example.com" required>
+
+              <label for="contact-subject">Тема</label>
+              <select id="contact-subject" name="subject">
+                <option value="general">Общий вопрос</option>
+                <option value="community">Подписка и сообщество</option>
+                <option value="tools">ИИ-инструменты</option>
+                <option value="support">Техническая поддержка</option>
+              </select>
+
+              <label for="contact-message">Сообщение*</label>
+              <textarea id="contact-message" name="message" rows="5" placeholder="Расскажите, чем мы можем помочь" required></textarea>
+
+              <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+              <p class="form-note">Форма отправляет данные на тестовый endpoint; обратная связь может быть обработана вручную.</p>
+            </form>
           </div>
           <div class="consulting-form-wrapper">
             <h2>Заявка на консалтинг</h2>
-            <p>Placeholder: отдельная форма для заявок на консалтинг (Имя, Email, Телефон, Описание проекта, Бюджет, reCAPTCHA).</p>
+            <form id="consulting-form" class="contact-form" action="api/contact.php" method="post">
+              <label for="consulting-name">Имя*</label>
+              <input type="text" id="consulting-name" name="name" placeholder="Ваше имя" required>
+
+              <label for="consulting-email">Email*</label>
+              <input type="email" id="consulting-email" name="email" placeholder="you@example.com" required>
+
+              <label for="consulting-company">Компания / студия</label>
+              <input type="text" id="consulting-company" name="company" placeholder="Название компании">
+
+              <label for="consulting-package">Интересующий формат</label>
+              <select id="consulting-package" name="package">
+                <option value="starter">Starter Kit</option>
+                <option value="guided">Guided Project</option>
+                <option value="workshop">Team Workshop</option>
+                <option value="retainer">Retainer</option>
+                <option value="other">Другое / не уверен(а)</option>
+              </select>
+
+              <label for="consulting-message">Краткое описание запроса*</label>
+              <textarea id="consulting-message" name="message" rows="5" placeholder="Расскажите о вашей команде, проектах и целях" required></textarea>
+
+              <label for="consulting-budget">Ориентировочный бюджет</label>
+              <select id="consulting-budget" name="budget">
+                <option value="<5k">до €5k</option>
+                <option value="5-15k">€5k–€15k</option>
+                <option value="15-50k">€15k–€50k</option>
+                <option value="50k+">€50k+</option>
+              </select>
+
+              <button type="submit" class="btn btn-secondary">Отправить заявку</button>
+              <p class="form-note">После отправки мы свяжемся с вами, чтобы уточнить детали и предложить формат работы.</p>
+            </form>
           </div>
         </div>
       </div>
