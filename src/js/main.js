@@ -26,4 +26,20 @@
       });
     });
   }
+
+  // Плавный скролл для внутренних якорей на текущей странице
+  document.addEventListener('click', (event) => {
+    const target = event.target.closest('a[href^="#"]');
+    if (!target) return;
+
+    const href = target.getAttribute('href');
+    if (!href || href === '#') return;
+
+    const id = href.substring(1);
+    const anchorTarget = document.getElementById(id);
+    if (!anchorTarget) return;
+
+    event.preventDefault();
+    anchorTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 })();
