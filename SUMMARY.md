@@ -1,1 +1,0 @@
-This file has been deprecated. All up-to-date project information is now in `README.md`.
