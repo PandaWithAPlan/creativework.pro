@@ -1,3 +1,11 @@
 node_modules
 test-results/
 *.log
+
+# Build / deploy artifacts
+public/
+dist/
+
+# OS-specific
+.DS_Store
+Thumbs.db
