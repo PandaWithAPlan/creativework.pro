@@ -15,14 +15,20 @@
 
   // Мобильное меню
   if (mobileToggle && navbarMenu) {
+    mobileToggle.setAttribute('aria-controls', 'navbar-menu');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    mobileToggle.setAttribute('aria-label', 'Открыть главное меню');
+
     mobileToggle.addEventListener('click', () => {
-      navbarMenu.classList.toggle('active');
+      const isOpen = navbarMenu.classList.toggle('active');
+      mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
     // Закрытие меню при клике по ссылке
     navbarMenu.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         navbarMenu.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
