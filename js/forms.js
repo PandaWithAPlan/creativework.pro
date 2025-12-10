@@ -98,13 +98,42 @@
         return;
       }
 
-      // На текущем этапе не делаем реальный запрос на backend, имитируем успех.
-      showFormStatus(
-        form,
-        'success',
-        'Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в течение 24 часов (CET).'
-      );
-      form.reset();
+      // Отправка данных на сервер
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch('api/contact.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then((data) => {
+          if (data.status === 'success') {
+            showFormStatus(
+              form,
+              'success',
+              'Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в течение 24 часов (CET).'
+            );
+            form.reset();
+          } else {
+            showFormStatus(form, 'error', data.message || 'Произошла ошибка при отправке.');
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          showFormStatus(form, 'error', 'Произошла ошибка связи с сервером. Попробуйте позже.');
+        })
+        .finally(() => {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 
