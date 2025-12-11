@@ -56,7 +56,7 @@
   <div class="flex flex-col md:flex-row h-screen overflow-hidden">
 
     <!-- LEFT SIDEBAR -->
-    <aside class="w-full md:w-[35%] bg-royal text-white flex flex-col justify-between p-8 md:p-12 md:h-full overflow-y-auto">
+    <aside class="w-full md:w-[35%] bg-royal text-white flex flex-col justify-between p-8 md:p-12 md:h-full overflow-y-auto shrink-0">
 
       <!-- Top Section -->
       <div>
@@ -67,10 +67,10 @@
           </a>
         </div>
 
-        <!-- Navigation (migrated from old header) -->
+        <!-- Navigation -->
         <nav class="mb-12">
           <ul class="space-y-4 text-lg font-medium">
-            <li><a href="index.html" class="text-white hover:text-pale transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Главная</a></li>
+            <li><a href="index.html" class="text-white hover:text-pale transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3"></span>Главная</a></li>
             <li><a href="about.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>О нас</a></li>
             <li><a href="services.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Сервисы</a></li>
             <li><a href="blog.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Блог</a></li>
@@ -112,17 +112,17 @@
           </div>
       </div>
 
-      <div class="p-8 md:p-16 max-w-4xl mx-auto">
+      <div class="p-8 md:p-16 max-w-5xl mx-auto">
 
         <!-- Hero Content -->
-        <section class="mb-16">
+        <section class="mb-20">
             <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-4 flex items-center">
                 <i class="fas fa-long-arrow-alt-right mr-2"></i> Экосистема Будущего
             </h2>
             <h1 class="text-4xl md:text-5xl font-bold text-slate-800 leading-tight mb-6">
                 Экосистема, где творческий профессионал работает с ИИ как с партнёром
             </h1>
-            <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+            <p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl">
                 Интегрируйте передовые технологии в свой творческий процесс. Сохраняйте авторство. Масштабируйте идеи.
             </p>
 
@@ -130,91 +130,312 @@
                 <a href="#pricing" class="px-8 py-3 bg-royal text-white font-bold rounded hover:bg-blue-800 transition text-center shadow-lg border border-transparent">
                     Присоединиться к сообществу
                 </a>
-                <a href="contact.html#contact-forms" class="px-8 py-3 bg-white text-royal font-bold rounded border-2 border-royal hover:bg-blue-50 transition text-center">
+                <a href="contact.html" class="px-8 py-3 bg-white text-royal font-bold rounded border-2 border-royal hover:bg-blue-50 transition text-center">
                     Заказать консалтинг
                 </a>
             </div>
         </section>
 
-        <!-- Features / Pillars -->
-        <section class="mb-16">
-            <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-8 flex items-center border-b border-gray-200 pb-2">
-                <i class="fas fa-long-arrow-alt-right mr-2"></i> Три уровня, один путь роста
-            </h2>
-
-            <div class="grid md:grid-cols-1 gap-8">
-                <!-- Pillar 1 -->
-                <div class="group hover:bg-gray-50 p-6 rounded-lg transition border-l-4 border-transparent hover:border-royal">
-                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-royal transition">Community Hub</h3>
-                    <ul class="space-y-2 text-slate-600">
-                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> <span>Закрытое сообщество и живая практика.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> <span>Библиотека материалов и инструментов.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> <span>Нетворкинг с единомышленниками.</span></li>
-                    </ul>
-                </div>
-
-                <!-- Pillar 2 -->
-                <div class="group hover:bg-gray-50 p-6 rounded-lg transition border-l-4 border-transparent hover:border-royal">
-                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-royal transition">Services & Tools</h3>
-                    <ul class="space-y-2 text-slate-600">
-                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> <span>B2B-консалтинг и корпоративные воркшопы.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> <span>Профессиональные ИИ-инструменты.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> <span>Внедрение ИИ в бизнес-процессы.</span></li>
-                    </ul>
-                </div>
-
-                <!-- Pillar 3 -->
-                <div class="group hover:bg-gray-50 p-6 rounded-lg transition border-l-4 border-transparent hover:border-royal">
-                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-royal transition">Innovation Lab</h3>
-                    <ul class="space-y-2 text-slate-600">
-                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> <span>R&D-лаборатория и грантовые программы.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> <span>Экспериментальные пилоты с партнёрами.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> <span>Двигатель инноваций индустрии.</span></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
         <!-- Stats Section -->
-        <section class="bg-pale rounded-xl p-8 md:p-12 relative overflow-hidden">
-             <!-- Background decoration -->
+        <section class="bg-pale rounded-xl p-8 md:p-12 mb-20 relative overflow-hidden">
              <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-blue-100 rounded-full blur-2xl opacity-50"></div>
-
              <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-8 flex items-center relative z-10">
                 <i class="fas fa-chart-line mr-2"></i> Результаты в цифрах
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-
-                <!-- Stat 1 -->
                 <div class="flex flex-col items-center text-center p-4 bg-white/50 rounded-lg shadow-sm border border-blue-100">
                     <div class="w-16 h-16 mb-4 flex items-center justify-center">
-                         <!-- Placeholder for Icon 1 -->
                          <img src="https://placehold.co/64x64/1a36be/FFFFFF?text=ICON:Community" class="rounded-full shadow-md" alt="Community Icon">
                     </div>
                     <div class="text-3xl font-bold text-royal mb-1">3000+</div>
-                    <div class="text-sm text-slate-600 font-medium">Участников</div>
+                    <div class="text-sm text-slate-600 font-medium">Участников из 45+ стран</div>
                 </div>
-
-                <!-- Stat 2 -->
                 <div class="flex flex-col items-center text-center p-4 bg-white/50 rounded-lg shadow-sm border border-blue-100">
                     <div class="w-16 h-16 mb-4 flex items-center justify-center">
-                         <!-- Placeholder for Icon 2 -->
                          <img src="https://placehold.co/64x64/1a36be/FFFFFF?text=ICON:Smile" class="rounded-full shadow-md" alt="Satisfaction Icon">
                     </div>
                     <div class="text-3xl font-bold text-royal mb-1">89%</div>
-                    <div class="text-sm text-slate-600 font-medium">Удовлетворенность</div>
+                    <div class="text-sm text-slate-600 font-medium">Удовлетворенность (NPS 92)</div>
                 </div>
-
-                <!-- Stat 3 -->
                 <div class="flex flex-col items-center text-center p-4 bg-white/50 rounded-lg shadow-sm border border-blue-100">
                     <div class="w-16 h-16 mb-4 flex items-center justify-center">
-                         <!-- Placeholder for Icon 3 -->
                          <img src="https://placehold.co/64x64/1a36be/FFFFFF?text=ICON:Gear" class="rounded-full shadow-md" alt="R&D Icon">
                     </div>
                     <div class="text-3xl font-bold text-royal mb-1">150+</div>
                     <div class="text-sm text-slate-600 font-medium">R&D Проектов</div>
                 </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-blue-200">
+                <p class="text-xs uppercase font-bold text-royal mb-4 tracking-widest">Нам доверяют партнёры:</p>
+                <div class="flex flex-wrap gap-6 items-center opacity-70 grayscale hover:grayscale-0 transition">
+                    <span class="font-bold text-lg text-slate-500">Figma</span>
+                    <span class="font-bold text-lg text-slate-500">Adobe</span>
+                    <span class="font-bold text-lg text-slate-500">OpenAI</span>
+                    <span class="font-bold text-lg text-slate-500">MIT Media Lab</span>
+                    <span class="font-bold text-lg text-slate-500">RCA</span>
+                    <span class="font-bold text-lg text-slate-500">Stripe</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pillars -->
+        <section class="mb-20">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-8 flex items-center border-b border-gray-200 pb-2">
+                <i class="fas fa-long-arrow-alt-right mr-2"></i> Три уровня, один путь роста
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Pillar 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg hover:bg-white hover:shadow-lg transition border border-transparent hover:border-royal group">
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-royal transition">Community Hub</h3>
+                    <p class="text-sm text-slate-600 mb-4 leading-relaxed">Закрытое сообщество, живая практика и библиотека материалов. Знакомство с инструментами и нетворкинг.</p>
+                    <a href="#pricing" class="text-sm font-bold text-royal hover:underline">Смотреть тарифы →</a>
+                </div>
+                <!-- Pillar 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg hover:bg-white hover:shadow-lg transition border border-transparent hover:border-royal group">
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-royal transition">Services & Tools</h3>
+                    <p class="text-sm text-slate-600 mb-4 leading-relaxed">Консалтинг, воркшопы и ИИ-инструменты для команд. Внедрение ИИ в реальные процессы.</p>
+                    <a href="services.html" class="text-sm font-bold text-royal hover:underline">Форматы консалтинга →</a>
+                </div>
+                <!-- Pillar 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg hover:bg-white hover:shadow-lg transition border border-transparent hover:border-royal group">
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-royal transition">Innovation Lab</h3>
+                    <p class="text-sm text-slate-600 mb-4 leading-relaxed">R&D‑лаборатория, гранты и спонсируемые пилоты. Эксперименты, двигающие индустрию.</p>
+                    <a href="blog.html" class="text-sm font-bold text-royal hover:underline">Подать заявку →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Verticals (Directions) -->
+        <section class="mb-20">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-8 flex items-center border-b border-gray-200 pb-2">
+                <i class="fas fa-layer-group mr-2"></i> Всё для всех дисциплин творчества
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <a href="services.html" class="block p-4 border border-gray-200 rounded hover:border-royal hover:bg-blue-50 transition group">
+                    <h3 class="font-bold text-slate-800 group-hover:text-royal">Дизайн & Графика</h3>
+                    <p class="text-xs text-slate-500 mt-1">UX/UI, брендинг</p>
+                </a>
+                <a href="services.html" class="block p-4 border border-gray-200 rounded hover:border-royal hover:bg-blue-50 transition group">
+                    <h3 class="font-bold text-slate-800 group-hover:text-royal">Иллюстрация</h3>
+                    <p class="text-xs text-slate-500 mt-1">Цифровая, концепт</p>
+                </a>
+                <a href="services.html" class="block p-4 border border-gray-200 rounded hover:border-royal hover:bg-blue-50 transition group">
+                    <h3 class="font-bold text-slate-800 group-hover:text-royal">Фотография</h3>
+                    <p class="text-xs text-slate-500 mt-1">Фото-дизайн, ретушь</p>
+                </a>
+                <a href="services.html" class="block p-4 border border-gray-200 rounded hover:border-royal hover:bg-blue-50 transition group">
+                    <h3 class="font-bold text-slate-800 group-hover:text-royal">Ремёсла</h3>
+                    <p class="text-xs text-slate-500 mt-1">Керамика, текстиль</p>
+                </a>
+                <a href="services.html" class="block p-4 border border-gray-200 rounded hover:border-royal hover:bg-blue-50 transition group">
+                    <h3 class="font-bold text-slate-800 group-hover:text-royal">Видео & Анимация</h3>
+                    <p class="text-xs text-slate-500 mt-1">Монтаж, motion</p>
+                </a>
+                <a href="services.html" class="block p-4 border border-gray-200 rounded hover:border-royal hover:bg-blue-50 transition group">
+                    <h3 class="font-bold text-slate-800 group-hover:text-royal">Архитектура</h3>
+                    <p class="text-xs text-slate-500 mt-1">BIM, визуализация</p>
+                </a>
+                <a href="services.html" class="block p-4 border border-gray-200 rounded hover:border-royal hover:bg-blue-50 transition group">
+                    <h3 class="font-bold text-slate-800 group-hover:text-royal">Музыка & Аудио</h3>
+                    <p class="text-xs text-slate-500 mt-1">Саунд-дизайн</p>
+                </a>
+                <a href="services.html" class="block p-4 border border-gray-200 rounded hover:border-royal hover:bg-blue-50 transition group">
+                    <h3 class="font-bold text-slate-800 group-hover:text-royal">Письмо</h3>
+                    <p class="text-xs text-slate-500 mt-1">Копирайтинг</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="mb-20">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-8 flex items-center border-b border-gray-200 pb-2">
+                <i class="fas fa-check-circle mr-2"></i> Почему выбирают нас
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex gap-4">
+                    <div class="shrink-0 w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-royal">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-lg">Ускоренное обучение с ИИ</h3>
+                        <p class="text-sm text-slate-600 mt-1 leading-relaxed">Краткие гайды и живые сессии помогают сократить путь от идеи до результата.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="shrink-0 w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-royal">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-lg">Сообщество практиков</h3>
+                        <p class="text-sm text-slate-600 mt-1 leading-relaxed">Закрытые каналы, peer-review и "show & tell" для реального роста.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="shrink-0 w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-royal">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-lg">Реальные проекты</h3>
+                        <p class="text-sm text-slate-600 mt-1 leading-relaxed">Пилотные программы, гранты и коллаборации превращают эксперименты в доход.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="shrink-0 w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-royal">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-lg">Понятная архитектура</h3>
+                        <p class="text-sm text-slate-600 mt-1 leading-relaxed">Три уровня позволяют начать с малого и масштабировать участие.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="mb-20 scroll-mt-20">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-8 flex items-center border-b border-gray-200 pb-2">
+                <i class="fas fa-tags mr-2"></i> Тарифы
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Plan 1 -->
+                <div class="border border-gray-200 rounded-lg p-6 flex flex-col hover:shadow-xl transition relative overflow-hidden">
+                    <h3 class="text-xl font-bold text-slate-800">Explorer</h3>
+                    <div class="my-4">
+                        <span class="text-4xl font-bold text-royal">$9</span>
+                        <span class="text-sm text-gray-500">/мес</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-6 flex-grow">Для первых шагов с ИИ и теста формата сообщества.</p>
+                    <ul class="text-sm text-slate-600 space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Доступ к Community Hub</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 2 живых сессии/мес</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Участие в челленджах</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full py-2 bg-slate-100 text-slate-800 font-bold text-center rounded hover:bg-slate-200 transition">Начать</a>
+                </div>
+
+                <!-- Plan 2 (Popular) -->
+                <div class="border-2 border-royal rounded-lg p-6 flex flex-col shadow-lg relative transform md:-translate-y-2 bg-white">
+                    <div class="absolute top-0 right-0 bg-royal text-white text-xs font-bold px-3 py-1 rounded-bl">POPULAR</div>
+                    <h3 class="text-xl font-bold text-slate-800">Creator</h3>
+                    <div class="my-4">
+                        <span class="text-4xl font-bold text-royal">$29</span>
+                        <span class="text-sm text-gray-500">/мес</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-6 flex-grow">Для практикующих креаторов, внедряющих ИИ в работу.</p>
+                    <ul class="text-sm text-slate-600 space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-royal mr-2"></i> <strong>Все из Explorer</strong></li>
+                        <li class="flex items-center"><i class="fas fa-check text-royal mr-2"></i> Продвинутые воркшопы</li>
+                        <li class="flex items-center"><i class="fas fa-check text-royal mr-2"></i> Приоритет в ревью работ</li>
+                        <li class="flex items-center"><i class="fas fa-check text-royal mr-2"></i> Закрытые Q&A сессии</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full py-2 bg-royal text-white font-bold text-center rounded hover:bg-blue-700 transition">Выбрать Creator</a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="border border-gray-200 rounded-lg p-6 flex flex-col hover:shadow-xl transition relative overflow-hidden">
+                    <h3 class="text-xl font-bold text-slate-800">Innovator</h3>
+                    <div class="my-4">
+                        <span class="text-4xl font-bold text-royal">$79</span>
+                        <span class="text-sm text-gray-500">/мес</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-6 flex-grow">Для студий и лидеров, работающих с Innovation Lab.</p>
+                    <ul class="text-sm text-slate-600 space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> <strong>Все из Creator</strong></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Стратегические сессии</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Доступ к грантам</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Совместные публикации</li>
+                    </ul>
+                    <a href="contact.html" class="block w-full py-2 bg-slate-100 text-slate-800 font-bold text-center rounded hover:bg-slate-200 transition">Стать Innovator</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section class="mb-20">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-8 flex items-center border-b border-gray-200 pb-2">
+                <i class="fas fa-star mr-2"></i> Истории успеха
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <article class="flex flex-col bg-white border border-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 mr-4 overflow-hidden">
+                            <img src="https://placehold.co/100x100/1a36be/FFFFFF?text=Maria" alt="Maria" class="object-cover w-full h-full">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Мария, иллюстратор</h4>
+                            <p class="text-xs text-gray-500">Берлин</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4 italic">"За 6 месяцев выросла с 2 до 6 проектов в месяц. Экономия ~8 часов в неделю на поиске референсов."</p>
+                    <div class="mt-auto pt-4 border-t border-gray-100 text-xs text-royal font-bold">
+                        3x Рост проектов • Ретейнер-модель
+                    </div>
+                </article>
+
+                <article class="flex flex-col bg-white border border-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 mr-4 overflow-hidden">
+                            <img src="https://placehold.co/100x100/1a36be/FFFFFF?text=Robert" alt="Robert" class="object-cover w-full h-full">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Роберт, архитектор</h4>
+                            <p class="text-xs text-gray-500">Копенгаген</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4 italic">"Тестируем варианты планировок еще на этапе пресейла. +25% конверсия в оплаченные проекты."</p>
+                    <div class="mt-auto pt-4 border-t border-gray-100 text-xs text-royal font-bold">
+                        -40% времени на концепт • Больше конкурсов
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Blog Preview -->
+        <section class="mb-20">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-8 flex items-center border-b border-gray-200 pb-2">
+                <i class="fas fa-newspaper mr-2"></i> Свежее в блоге
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="group">
+                    <div class="bg-gray-200 h-40 rounded mb-4 overflow-hidden">
+                        <img src="https://placehold.co/400x250/e0f7fa/1a36be?text=DALL-E+Guide" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-xs font-bold text-royal uppercase">Практика</span>
+                    <h3 class="font-bold text-slate-800 mt-1 mb-2 leading-tight group-hover:text-royal transition"><a href="blog.html">DALL·E для иллюстраторов: от скетча до финала</a></h3>
+                    <p class="text-xs text-slate-500">7 мин чтения</p>
+                </article>
+                <article class="group">
+                    <div class="bg-gray-200 h-40 rounded mb-4 overflow-hidden">
+                         <img src="https://placehold.co/400x250/e0f7fa/1a36be?text=BIM+AI" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-xs font-bold text-royal uppercase">Кейсы</span>
+                    <h3 class="font-bold text-slate-800 mt-1 mb-2 leading-tight group-hover:text-royal transition"><a href="blog.html">5 способов встроить ИИ в BIM-воркфлоу</a></h3>
+                    <p class="text-xs text-slate-500">9 мин чтения</p>
+                </article>
+                <article class="group">
+                    <div class="bg-gray-200 h-40 rounded mb-4 overflow-hidden">
+                         <img src="https://placehold.co/400x250/e0f7fa/1a36be?text=Strategy" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-xs font-bold text-royal uppercase">Стратегия</span>
+                    <h3 class="font-bold text-slate-800 mt-1 mb-2 leading-tight group-hover:text-royal transition"><a href="blog.html">Как креативным студиям строить подписочные продукты</a></h3>
+                    <p class="text-xs text-slate-500">8 мин чтения</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Newsletter / Contact CTA -->
+        <section class="bg-slate-800 text-white rounded-xl p-8 md:p-12 text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://placehold.co/1000x400/FFFFFF/000000?text=Texture')] bg-cover"></div>
+            <div class="relative z-10 max-w-2xl mx-auto">
+                <h2 class="text-2xl font-bold mb-4">Получайте свежие идеи каждую неделю</h2>
+                <p class="text-gray-300 mb-8">Подборка лучших материалов из комьюнити и блога — без спама.</p>
+                <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                    <input type="email" placeholder="you@example.com" class="px-4 py-3 rounded text-slate-800 flex-grow focus:outline-none focus:ring-2 focus:ring-royal-light" required>
+                    <button type="submit" class="px-6 py-3 bg-royal hover:bg-blue-600 rounded font-bold transition">Подписаться</button>
+                </form>
+                <p class="text-xs text-gray-500 mt-4">Нажимая на кнопку, вы соглашаетесь с <a href="privacy.html" class="underline hover:text-white">Политикой конфиденциальности</a>.</p>
             </div>
         </section>
 
@@ -226,5 +447,8 @@
       </footer>
     </main>
   </div>
+  <script src="js/analytics.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
 </body>
 </html>
