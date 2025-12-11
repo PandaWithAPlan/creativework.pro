@@ -3,129 +3,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>О Creative Work Pro Hub</title>
+  <title>О Creative Work Pro Hub — История и Миссия</title>
   <meta name="description" content="История, миссия и команда Creative Work Pro Hub.">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: {
+              DEFAULT: '#1a36be',
+              light: '#2563EB',
+            },
+            pale: '#e0f7fa',
+            slate: {
+              800: '#334155',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          letterSpacing: {
+            widest: '.2em',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="page-about">
-  <header id="main-header" class="header">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-content">
-          <div class="navbar-logo"><a href="index.html">Creative Work Pro Hub</a></div>
-          <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html" class="is-active">О нас</a></li>
-            <li><a href="services.html">Сервисы</a></li>
-            <li><a href="blog.html">Блог</a></li>
-            <li><a href="contact.html">Контакты</a></li>
+<body class="font-sans antialiased text-slate-800">
+
+  <div class="flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="w-full md:w-[35%] bg-royal text-white flex flex-col justify-between p-8 md:p-12 md:h-full overflow-y-auto shrink-0">
+
+      <!-- Top Section -->
+      <div>
+        <!-- Logo -->
+        <div class="mb-10">
+          <a href="index.html" class="text-2xl font-bold tracking-tight text-white hover:text-gray-200 transition">
+            CREATIVE WORK<br>PRO HUB
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="mb-12">
+          <ul class="space-y-4 text-lg font-medium">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Главная</a></li>
+            <li><a href="about.html" class="text-white hover:text-pale transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3"></span>О нас</a></li>
+            <li><a href="services.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Сервисы</a></li>
+            <li><a href="blog.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Блог</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Контакты</a></li>
           </ul>
-          <button class="navbar-toggle" id="mobile-menu-btn">☰</button>
+        </nav>
+
+        <!-- Project Description -->
+        <div class="mb-12">
+            <h3 class="text-sm font-bold uppercase tracking-widest mb-4 text-blue-300">О проекте</h3>
+            <p class="text-gray-300 leading-relaxed text-sm">
+                Creative Work Pro Hub объединяет сообщество, практические сервисы и Innovation Lab, чтобы помочь вам встроить ИИ в ежедневную творческую практику — без потери авторства и контроля над процессом.
+            </p>
         </div>
       </div>
-    </nav>
-  </header>
 
-  <main id="page-about" class="main">
-    <!-- Hero -->
-    <section class="section page-hero reveal-on-scroll">
-      <div class="container">
-        <h1>О Creative Work Pro Hub</h1>
-        <p>Платформа, которая родилась из вопросов творцов: как работать с ИИ так, чтобы усиливать авторство, а не терять его.</p>
+      <!-- Bottom Section: Contact Info -->
+      <div class="border-t border-blue-800 pt-8 mt-8">
+        <h3 class="text-sm font-bold uppercase tracking-widest mb-4 text-blue-300 flex items-center">
+             Контакты <i class="fas fa-arrow-right ml-2 text-xs"></i>
+        </h3>
+        <div class="space-y-3 text-sm text-gray-300">
+            <p class="flex items-center"><i class="fas fa-map-marker-alt w-5 mr-2 text-pale"></i> Digital Nomad HQ, Global</p>
+            <p class="flex items-center"><i class="fas fa-envelope w-5 mr-2 text-pale"></i> <a href="mailto:hello@creativeworkhub.io" class="hover:text-white underline decoration-blue-500 underline-offset-4">hello@creativeworkhub.io</a></p>
+        </div>
       </div>
-    </section>
+    </aside>
 
-    <!-- История -->
-    <section id="about-story" class="section about-story reveal-on-scroll">
-      <div class="container">
-        <h2>История</h2>
-        <p>Creative Work Pro Hub начался с серии разговоров в берлинской кофейне между дизайнером, продюсером и исследователем ИИ. Вместо восторга от "магии алгоритмов" их волновал один вопрос: как сделать так, чтобы творцы не оказались за бортом новой волны технологий.</p>
-        <p>Команда провела более 100 интервью с иллюстраторами, архитекторами, фотографами, ремесленниками и писателями из Европы и США. Все говорили об одном и том же: много шума вокруг ИИ, мало понятных путей внедрения в реальную практику и ещё меньше — безопасного пространства для экспериментов.</p>
-        <p>Первая версия хаба была запущена как небольшой клуб в онлайне. Уже через год у сообщества было более 3,000 участников из 45+ стран, 150+ завершённых R&amp;D‑проектов и партнёрства с институциями уровня MIT Media Lab и Royal College of Art. Так платформа превратилась в трёхуровневую экосистему — от Community Hub до Innovation Lab.</p>
-      </div>
-    </section>
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="w-full md:w-[65%] bg-white h-full overflow-y-scroll">
 
-    <!-- Миссия и ценности -->
-    <section id="about-mission" class="section about-mission reveal-on-scroll">
-      <div class="container">
-        <h2>Миссия и ценности</h2>
-        <div class="about-mission-grid">
-          <div class="about-mission-text">
-            <p>Наша миссия — помочь творческим профессионалам процветать в эпоху ИИ. Мы создаём среду, где технологии усиливают ремесло, а не подменяют его, а сообщество и образование делают переход к новым инструментам управляемым.</p>
-            <p>Creative Work Pro Hub объединяет три уровня: подписочный Community Hub, практико-ориентированные Services &amp; Tools и экспериментальный Innovation Lab. Вместе они формируют устойчивую экосистему, в которой креаторы могут учиться, зарабатывать и экспериментировать, не теряя контроля над своим авторством.</p>
+      <!-- Hero Image -->
+      <div class="w-full h-48 md:h-64 bg-gray-200 relative">
+          <img src="https://placehold.co/1200x400/1a36be/FFFFFF?text=About+Us+Hero:+Team+Brainstorming"
+               alt="Hero Image: Team Brainstorming"
+               class="w-full h-full object-cover">
+          <div class="absolute bottom-0 left-0 bg-white/90 px-4 py-1 text-xs font-mono text-royal">
+              Generated by Nano Banana Pro
           </div>
-          <div class="about-values">
-            <h3>Наши ценности</h3>
-            <ul>
-              <li><strong>Прозрачность</strong> — понятные правила, цены и ожидания с обеих сторон.</li>
-              <li><strong>Мастерство</strong> — уважение к ремеслу и глубокому знанию домена.</li>
-              <li><strong>Сообщество</strong> — мы строим не "аудиторию", а сеть взаимной поддержки.</li>
-              <li><strong>Инновация</strong> — безопасные экспериментальные пространства в рамках Innovation Lab.</li>
-            </ul>
-          </div>
-        </div>
       </div>
-    </section>
 
-    <!-- Команда -->
-    <section id="about-team" class="section about-team reveal-on-scroll">
-      <div class="container">
-        <h2>Команда</h2>
-        <p class="section-subtitle">Карточки ключевых членов команды и общее описание distributed-команды из 25 человек в 12 странах.</p>
-        <div class="team-grid">
-          <!-- Карточки Марии, Алекса, Хенрика и др. будут добавлены на Фазе 3–4 -->
-        </div>
-      </div>
-    </section>
+      <div class="p-8 md:p-16 max-w-4xl mx-auto">
 
-    <!-- Инвесторы и партнёры -->
-    <section id="about-investors" class="section about-investors reveal-on-scroll">
-      <div class="container">
-        <h2>Поддержанные лучшими инвесторами</h2>
-        <p>Placeholder для описания Omidyar Network, Knight Foundation, Stripe и государственных грантов.</p>
-        <div class="investors-logos">
-          <!-- Места под логотипы инвесторов и партнёров -->
-        </div>
-      </div>
-    </section>
-  </main>
+        <!-- Page Title -->
+        <section class="mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 leading-tight mb-6">О Creative Work Pro Hub</h1>
+            <p class="text-lg text-slate-600 leading-relaxed border-l-4 border-royal pl-6 italic">
+                Платформа, которая родилась из вопросов творцов: как работать с ИИ так, чтобы усиливать авторство, а не терять его.
+            </p>
+        </section>
 
-  <footer id="main-footer" class="footer">
-    <div class="container footer-content">
-      <div class="footer-section">
-        <h4>Компания</h4>
-        <ul>
-          <li><a href="about.html">О нас</a></li>
-          <li><a href="blog.html">Блог</a></li>
-          <li><a href="contact.html">Контакты</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Продукты</h4>
-        <ul>
-          <li><a href="services.html">Сервисы</a></li>
-          <li><a href="#">Подписка</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Правовые</h4>
-        <ul>
-          <li><a href="privacy.html">Политика конфиденциальности</a></li>
-          <li><a href="terms.html">Условия использования</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2024–2025 Creative Work Pro Hub. Все права защищены.</p>
-    </div>
-  </footer>
+        <!-- Story -->
+        <section class="mb-16">
+             <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-6 flex items-center border-b border-gray-200 pb-2">
+                <i class="fas fa-history mr-2"></i> История
+            </h2>
+            <div class="prose prose-lg text-slate-600">
+                <p class="mb-4">Creative Work Pro Hub начался с серии разговоров в берлинской кофейне между дизайнером, продюсером и исследователем ИИ. Вместо восторга от "магии алгоритмов" их волновал один вопрос: как сделать так, чтобы творцы не оказались за бортом новой волны технологий.</p>
+                <p class="mb-4">Команда провела более 100 интервью с иллюстраторами, архитекторами, фотографами, ремесленниками и писателями из Европы и США. Все говорили об одном и том же: много шума вокруг ИИ, мало понятных путей внедрения в реальную практику и ещё меньше — безопасного пространства для экспериментов.</p>
+                <p>Первая версия хаба была запущена как небольшой клуб в онлайне. Уже через год у сообщества было более 3,000 участников из 45+ стран, 150+ завершённых R&D‑проектов и партнёрства с институциями уровня MIT Media Lab и Royal College of Art.</p>
+            </div>
+        </section>
 
+        <!-- Mission -->
+        <section class="mb-16">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-6 flex items-center border-b border-gray-200 pb-2">
+                <i class="fas fa-bullseye mr-2"></i> Миссия и Ценности
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-bold text-xl text-slate-800 mb-3">Наша миссия</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Помочь творческим профессионалам процветать в эпоху ИИ. Мы создаём среду, где технологии усиливают ремесло, а не подменяют его, а сообщество и образование делают переход к новым инструментам управляемым.</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-xl text-royal mb-4">Наши ценности</h3>
+                    <ul class="space-y-3 text-sm text-slate-700">
+                         <li class="flex items-start"><i class="fas fa-check text-royal mt-1 mr-2"></i> <span><strong>Прозрачность:</strong> Понятные правила и ожидания.</span></li>
+                         <li class="flex items-start"><i class="fas fa-check text-royal mt-1 mr-2"></i> <span><strong>Мастерство:</strong> Уважение к ремеслу и знанию.</span></li>
+                         <li class="flex items-start"><i class="fas fa-check text-royal mt-1 mr-2"></i> <span><strong>Сообщество:</strong> Сеть взаимной поддержки.</span></li>
+                         <li class="flex items-start"><i class="fas fa-check text-royal mt-1 mr-2"></i> <span><strong>Инновация:</strong> Безопасные эксперименты.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Placeholder -->
+        <section class="mb-16">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-6 flex items-center border-b border-gray-200 pb-2">
+                <i class="fas fa-users mr-2"></i> Команда
+            </h2>
+            <p class="text-slate-600 mb-8">Distributed-команда из 25 человек в 12 странах.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-gray-100 rounded p-4 text-center">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full mx-auto mb-2"></div>
+                    <div class="font-bold text-sm">Maria S.</div>
+                    <div class="text-xs text-gray-500">Founder</div>
+                </div>
+                 <div class="bg-gray-100 rounded p-4 text-center">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full mx-auto mb-2"></div>
+                    <div class="font-bold text-sm">Alex D.</div>
+                    <div class="text-xs text-gray-500">CTO</div>
+                </div>
+                 <div class="bg-gray-100 rounded p-4 text-center">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full mx-auto mb-2"></div>
+                    <div class="font-bold text-sm">Henrik L.</div>
+                    <div class="text-xs text-gray-500">AI Lead</div>
+                </div>
+                 <div class="bg-gray-100 rounded p-4 text-center">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full mx-auto mb-2 flex items-center justify-center text-gray-500 font-bold">+22</div>
+                    <div class="font-bold text-sm">Global Team</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investors -->
+        <section class="bg-pale rounded-xl p-8 text-center">
+             <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-4">Поддержаны лучшими</h2>
+             <p class="text-sm text-slate-600 mb-6">Omidyar Network, Knight Foundation, Stripe и гранты.</p>
+             <div class="flex justify-center gap-4 text-royal font-bold opacity-70">
+                 <span>OMIDYAR</span>
+                 <span>KNIGHT</span>
+                 <span>STRIPE</span>
+             </div>
+        </section>
+
+      </div>
+
+      <!-- Footer Note -->
+      <footer class="p-8 text-center text-xs text-gray-400 bg-gray-50 border-t border-gray-200">
+        <p>© 2024–2025 Creative Work Pro Hub. Все права защищены.</p>
+      </footer>
+    </main>
+  </div>
   <script src="js/analytics.js"></script>
   <script src="js/main.js"></script>
   <script src="js/forms.js"></script>
-  <script src="js/scroll-animation.js"></script>
 </body>
 </html>

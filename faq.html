@@ -5,214 +5,220 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ — Creative Work Pro Hub</title>
   <meta name="description" content="Ответы на частые вопросы о подписке, инструментах, консалтинге и R&D.">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: {
+              DEFAULT: '#1a36be',
+              light: '#2563EB',
+            },
+            pale: '#e0f7fa',
+            slate: {
+              800: '#334155',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          letterSpacing: {
+            widest: '.2em',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="page-faq">
-  <header id="main-header" class="header">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-content">
-          <div class="navbar-logo"><a href="index.html">Creative Work Pro Hub</a></div>
-          <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="services.html">Сервисы</a></li>
-            <li><a href="blog.html">Блог</a></li>
-            <li><a href="contact.html">Контакты</a></li>
+<body class="font-sans antialiased text-slate-800">
+
+  <div class="flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="w-full md:w-[35%] bg-royal text-white flex flex-col justify-between p-8 md:p-12 md:h-full overflow-y-auto shrink-0">
+
+      <!-- Top Section -->
+      <div>
+        <!-- Logo -->
+        <div class="mb-10">
+          <a href="index.html" class="text-2xl font-bold tracking-tight text-white hover:text-gray-200 transition">
+            CREATIVE WORK<br>PRO HUB
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="mb-12">
+          <ul class="space-y-4 text-lg font-medium">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Главная</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>О нас</a></li>
+            <li><a href="services.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Сервисы</a></li>
+            <li><a href="blog.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Блог</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Контакты</a></li>
           </ul>
-          <button class="navbar-toggle" id="mobile-menu-btn">☰</button>
+        </nav>
+
+        <!-- Project Description -->
+        <div class="mb-12">
+            <h3 class="text-sm font-bold uppercase tracking-widest mb-4 text-blue-300">О проекте</h3>
+            <p class="text-gray-300 leading-relaxed text-sm">
+                Creative Work Pro Hub объединяет сообщество, практические сервисы и Innovation Lab, чтобы помочь вам встроить ИИ в ежедневную творческую практику — без потери авторства и контроля над процессом.
+            </p>
         </div>
       </div>
-    </nav>
-  </header>
 
-  <main id="page-faq" class="main">
-    <!-- Hero -->
-    <section class="section page-hero reveal-on-scroll">
-      <div class="container">
-        <h1>Часто задаваемые вопросы</h1>
-        <p>Структурированный FAQ по ключевым темам: подписка, ИИ-инструменты, консалтинг, сообщество и технические вопросы.</p>
-      </div>
-    </section>
-
-    <!-- Subscription FAQ -->
-    <section id="faq-subscription" class="section faq-section reveal-on-scroll">
-      <div class="container">
-        <h2>Подписка</h2>
-        <div class="faq-accordion">
-          <details class="faq-item">
-            <summary>Какие тарифы Community Hub доступны и чем они отличаются?</summary>
-            <div class="faq-answer">
-              <p>Мы предлагаем три уровня: Explorer, Creator и Innovator. Они отличаются объёмом контента, объёмом участия в воркшопах и уровнем доступа к программам Innovation Lab. Краткая сводка есть на главной в блоке "Прозрачное ценообразование" и подробнее — на странице сервиса.</p>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary>Могу ли я отменить подписку в любой момент?</summary>
-            <div class="faq-answer">
-              <p>Да, вы можете отменить подписку в любой момент. Доступ к материалам и сообществу будет активен до конца оплаченного периода, после чего списания прекращаются.</p>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary>Есть ли пробный период или демо-доступ?</summary>
-            <div class="faq-answer">
-              <p>Периодически мы запускаем пробные недели и открытые воркшопы. Если вы хотите протестировать хаб для команды, напишите нам через форму контактов с пометкой "Trial".</p>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary>Какие способы оплаты поддерживаются?</summary>
-            <div class="faq-answer">
-              <p>Индивидуальные подписки оплачиваются банковскими картами и через основные платёжные сервисы. Для компаний доступны счета и инвойсы в евро и долларах.</p>
-            </div>
-          </details>
+      <!-- Bottom Section: Contact Info -->
+      <div class="border-t border-blue-800 pt-8 mt-8">
+        <h3 class="text-sm font-bold uppercase tracking-widest mb-4 text-blue-300 flex items-center">
+             Контакты <i class="fas fa-arrow-right ml-2 text-xs"></i>
+        </h3>
+        <div class="space-y-3 text-sm text-gray-300">
+            <p class="flex items-center"><i class="fas fa-map-marker-alt w-5 mr-2 text-pale"></i> Digital Nomad HQ, Global</p>
+            <p class="flex items-center"><i class="fas fa-envelope w-5 mr-2 text-pale"></i> <a href="mailto:hello@creativeworkhub.io" class="hover:text-white underline decoration-blue-500 underline-offset-4">hello@creativeworkhub.io</a></p>
         </div>
       </div>
-    </section>
+    </aside>
 
-    <!-- Tools FAQ -->
-    <section id="faq-tools" class="section faq-section reveal-on-scroll">
-      <div class="container">
-        <h2>ИИ-инструменты и авторское право</h2>
-        <div class="faq-accordion">
-          <details class="faq-item">
-            <summary>Какие ИИ-инструменты входят в ваш стек?</summary>
-            <div class="faq-answer">
-              <p>Мы работаем с несколькими категориями инструментов: генерация изображений, видео, звука, текста и 3D. Конкретный набор подбирается под вашу вертикаль и может меняться по мере появления новых решений.</p>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary>Кому принадлежат права на созданный с помощью ИИ контент?</summary>
-            <div class="faq-answer">
-              <p>Наш базовый принцип: созданный вами контент принадлежит вам или вашей компании, с учётом лицензионных условий конкретных инструментов. В рамках консалтинга мы отдельно проговариваем юридические аспекты для каждого кейса.</p>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary>Как вы относитесь к этическим вопросам и датасетам для обучения ИИ?</summary>
-            <div class="faq-answer">
-              <p>Мы придерживаемся принципа этичного использования ИИ: прозрачность, уважение к авторам и отказ от инструментов с явно проблемной юридической или этической репутацией. В блоге и воркшопах мы открыто обсуждаем ограничения технологий.</p>
-            </div>
-          </details>
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="w-full md:w-[65%] bg-white h-full overflow-y-scroll">
+
+      <!-- Hero Image -->
+      <div class="w-full h-48 md:h-64 bg-gray-200 relative">
+          <img src="https://placehold.co/1200x400/1a36be/FFFFFF?text=FAQ+Hero:+Common+Questions"
+               alt="Hero Image: FAQ"
+               class="w-full h-full object-cover">
+          <div class="absolute bottom-0 left-0 bg-white/90 px-4 py-1 text-xs font-mono text-royal">
+              Generated by Nano Banana Pro
+          </div>
+      </div>
+
+      <div class="p-8 md:p-16 max-w-4xl mx-auto">
+
+        <!-- Page Title -->
+        <section class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 leading-tight mb-6">Часто задаваемые вопросы</h1>
+            <p class="text-lg text-slate-600 leading-relaxed border-l-4 border-royal pl-6 italic">
+                Ответы на вопросы о подписке, инструментах, консалтинге и R&D.
+            </p>
+        </section>
+
+        <!-- FAQ Sections -->
+        <div class="space-y-12">
+
+            <!-- Subscription -->
+            <section>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-6 flex items-center border-b border-gray-200 pb-2">
+                    <i class="fas fa-credit-card mr-2"></i> Подписка
+                </h2>
+                <div class="space-y-4">
+                    <details class="group bg-gray-50 rounded-lg p-4 cursor-pointer hover:bg-blue-50 transition">
+                        <summary class="font-bold text-slate-800 group-open:text-royal flex items-center justify-between">
+                            Какие тарифы Community Hub доступны?
+                            <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
+                        </summary>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed">Мы предлагаем три уровня: Explorer, Creator и Innovator. Подробнее смотрите на странице <a href="services.html" class="underline text-royal">Сервисы</a>.</p>
+                    </details>
+                    <details class="group bg-gray-50 rounded-lg p-4 cursor-pointer hover:bg-blue-50 transition">
+                        <summary class="font-bold text-slate-800 group-open:text-royal flex items-center justify-between">
+                            Могу ли я отменить подписку в любой момент?
+                             <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
+                        </summary>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed">Да, вы можете отменить подписку в любой момент. Доступ сохранится до конца оплаченного периода.</p>
+                    </details>
+                    <details class="group bg-gray-50 rounded-lg p-4 cursor-pointer hover:bg-blue-50 transition">
+                         <summary class="font-bold text-slate-800 group-open:text-royal flex items-center justify-between">
+                            Есть ли пробный период?
+                             <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
+                        </summary>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed">Мы периодически проводим открытые недели. Напишите нам, если хотите протестировать хаб для команды.</p>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Tools & Ethics -->
+            <section>
+                 <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-6 flex items-center border-b border-gray-200 pb-2">
+                    <i class="fas fa-robot mr-2"></i> Инструменты и Этика
+                </h2>
+                <div class="space-y-4">
+                    <details class="group bg-gray-50 rounded-lg p-4 cursor-pointer hover:bg-blue-50 transition">
+                        <summary class="font-bold text-slate-800 group-open:text-royal flex items-center justify-between">
+                             Кому принадлежат права на контент?
+                              <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
+                        </summary>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed">Контент принадлежит вам, с учётом лицензий конкретных ИИ-инструментов. Мы всегда разбираем юридические аспекты в консалтинге.</p>
+                    </details>
+                    <details class="group bg-gray-50 rounded-lg p-4 cursor-pointer hover:bg-blue-50 transition">
+                         <summary class="font-bold text-slate-800 group-open:text-royal flex items-center justify-between">
+                             Как вы относитесь к этике ИИ?
+                              <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
+                         </summary>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed">Мы за прозрачность и уважение к авторам. Мы не рекомендуем инструменты с сомнительной репутацией и обучаем ответственному использованию.</p>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Consulting -->
+            <section>
+                 <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-6 flex items-center border-b border-gray-200 pb-2">
+                    <i class="fas fa-briefcase mr-2"></i> Консалтинг
+                </h2>
+                <div class="space-y-4">
+                     <details class="group bg-gray-50 rounded-lg p-4 cursor-pointer hover:bg-blue-50 transition">
+                         <summary class="font-bold text-slate-800 group-open:text-royal flex items-center justify-between">
+                            Как записаться на воркшоп?
+                             <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
+                         </summary>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed">Используйте форму на странице <a href="contact.html" class="underline text-royal">Контакты</a> или напишите нам на email.</p>
+                    </details>
+                     <details class="group bg-gray-50 rounded-lg p-4 cursor-pointer hover:bg-blue-50 transition">
+                         <summary class="font-bold text-slate-800 group-open:text-royal flex items-center justify-between">
+                            Проводите ли вы корпоративные программы?
+                             <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
+                         </summary>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed">Да, мы работаем со студиями и брендами. Форматы: от воркшопов до длительных проектов внедрения.</p>
+                    </details>
+                </div>
+            </section>
+
+             <!-- R&D -->
+            <section>
+                 <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-6 flex items-center border-b border-gray-200 pb-2">
+                    <i class="fas fa-flask mr-2"></i> Innovation Lab
+                </h2>
+                <div class="space-y-4">
+                     <details class="group bg-gray-50 rounded-lg p-4 cursor-pointer hover:bg-blue-50 transition">
+                         <summary class="font-bold text-slate-800 group-open:text-royal flex items-center justify-between">
+                            Как попасть в программу Innovation Lab?
+                             <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition"></i>
+                         </summary>
+                        <p class="mt-3 text-slate-600 text-sm leading-relaxed">Мы периодически открываем наборы. Участники Community Hub получают приоритет.</p>
+                    </details>
+                </div>
+            </section>
+
         </div>
-      </div>
-    </section>
 
-    <!-- Consulting & Workshops FAQ -->
-    <section id="faq-consulting" class="section faq-section reveal-on-scroll">
-      <div class="container">
-        <h2>Консалтинг и воркшопы</h2>
-        <div class="faq-accordion">
-          <details class="faq-item">
-            <summary>Как записаться на консалтинг или воркшоп?</summary>
-            <div class="faq-answer">
-              <p>Используйте форму "Заявка на консалтинг" на странице контактов или напишите на partners@creativeworkhub.io с кратким описанием задачи и сроков.</p>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary>Проводите ли вы корпоративные программы для команд?</summary>
-            <div class="faq-answer">
-              <p>Да, мы регулярно работаем со студиями, агентствами и отделами крупных компаний. Формат подбирается индивидуально: от однодневного воркшопа до многонедельного Guided Project.</p>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary>Будут ли у меня записи воркшопов?</summary>
-            <div class="faq-answer">
-              <p>Для большинства онлайн-воркшопов записи доступны участникам в течение ограниченного времени. Условия по корпоративным программам фиксируются в договоре.</p>
-            </div>
-          </details>
-        </div>
       </div>
-    </section>
 
-    <!-- R&D & Community FAQ -->
-    <section id="faq-rnd" class="section faq-section reveal-on-scroll">
-      <div class="container">
-        <h2>R&D и сообщество</h2>
-        <div class="faq-accordion">
-          <details class="faq-item">
-            <summary>Как попасть в программы Innovation Lab?</summary>
-            <div class="faq-answer">
-              <p>Мы периодически открываем наборы в R&amp;D-программы. Участники Community Hub получают приоритетный доступ к анонсам и могут подавать заявки на гранты и пилоты через внутренние формы.</p>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary>Что происходит с результатами R&amp;D-проектов?</summary>
-            <div class="faq-answer">
-              <p>Формат зависит от проекта: часть результатов публикуется публично, часть остаётся внутри партнёрских команд. Мы заранее согласуем, какие данные и кейсы можно использовать в блоге и презентациях.</p>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary>На каких языках общается сообщество?</summary>
-            <div class="faq-answer">
-              <p>Основные рабочие языки — английский и русский. Отдельные каналы и воркшопы могут проводиться на других языках в зависимости от кураторов и партнёров.</p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Technical & Accessibility FAQ -->
-    <section id="faq-technical" class="section faq-section reveal-on-scroll">
-      <div class="container">
-        <h2>Технические вопросы и доступность</h2>
-        <div class="faq-accordion">
-          <details class="faq-item">
-            <summary>Какие браузеры и устройства поддерживаются?</summary>
-            <div class="faq-answer">
-              <p>Мы рекомендуем последние версии Chrome, Firefox, Safari и Edge. Интерфейс оптимизирован под десктоп и современные мобильные устройства.</p>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary>Есть ли у вас мобильное приложение?</summary>
-            <div class="faq-answer">
-              <p>Сейчас доступна веб-версия, адаптированная под мобильные устройства. Возможность отдельного приложения рассматривается и будет анонсирована дополнительно.</p>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary>Как связаться с технической поддержкой?</summary>
-            <div class="faq-answer">
-              <p>По вопросам доступа и технических ошибок напишите на hello@creativeworkhub.io или используйте общую контактную форму, выбрав тему "Техническая поддержка".</p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer id="main-footer" class="footer">
-    <div class="container footer-content">
-      <div class="footer-section">
-        <h4>Компания</h4>
-        <ul>
-          <li><a href="about.html">О нас</a></li>
-          <li><a href="blog.html">Блог</a></li>
-          <li><a href="contact.html">Контакты</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Продукты</h4>
-        <ul>
-          <li><a href="services.html">Сервисы</a></li>
-          <li><a href="#">Подписка</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Правовые</h4>
-        <ul>
-          <li><a href="privacy.html">Политика конфиденциальности</a></li>
-          <li><a href="terms.html">Условия использования</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2024–2025 Creative Work Pro Hub. Все права защищены.</p>
-    </div>
-  </footer>
-
+      <!-- Footer Note -->
+      <footer class="p-8 text-center text-xs text-gray-400 bg-gray-50 border-t border-gray-200">
+        <p>© 2024–2025 Creative Work Pro Hub. Все права защищены.</p>
+      </footer>
+    </main>
+  </div>
   <script src="js/analytics.js"></script>
   <script src="js/main.js"></script>
   <script src="js/forms.js"></script>
-  <script src="js/scroll-animation.js"></script>
 </body>
 </html>

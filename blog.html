@@ -5,114 +5,218 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Блог — Creative Work Pro Hub</title>
   <meta name="description" content="Статьи, кейсы и интервью об интеграции ИИ в творчество.">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: {
+              DEFAULT: '#1a36be',
+              light: '#2563EB',
+            },
+            pale: '#e0f7fa',
+            slate: {
+              800: '#334155',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          letterSpacing: {
+            widest: '.2em',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom Scrollbar for the right panel */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+  </style>
 </head>
-<body class="page-blog">
-  <header id="main-header" class="header">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-content">
-          <div class="navbar-logo"><a href="index.html">Creative Work Pro Hub</a></div>
-          <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="services.html">Сервисы</a></li>
-            <li><a href="blog.html" class="is-active">Блог</a></li>
-            <li><a href="contact.html">Контакты</a></li>
+<body class="font-sans antialiased text-slate-800">
+
+  <div class="flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="w-full md:w-[35%] bg-royal text-white flex flex-col justify-between p-8 md:p-12 md:h-full overflow-y-auto shrink-0">
+
+      <!-- Top Section -->
+      <div>
+        <!-- Logo -->
+        <div class="mb-10">
+          <a href="index.html" class="text-2xl font-bold tracking-tight text-white hover:text-gray-200 transition">
+            CREATIVE WORK<br>PRO HUB
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="mb-12">
+          <ul class="space-y-4 text-lg font-medium">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Главная</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>О нас</a></li>
+            <li><a href="services.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Сервисы</a></li>
+            <li><a href="blog.html" class="text-white hover:text-pale transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3"></span>Блог</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Контакты</a></li>
           </ul>
-          <button class="navbar-toggle" id="mobile-menu-btn">☰</button>
+        </nav>
+
+        <!-- Project Description -->
+        <div class="mb-12">
+            <h3 class="text-sm font-bold uppercase tracking-widest mb-4 text-blue-300">О проекте</h3>
+            <p class="text-gray-300 leading-relaxed text-sm">
+                Creative Work Pro Hub объединяет сообщество, практические сервисы и Innovation Lab, чтобы помочь вам встроить ИИ в ежедневную творческую практику — без потери авторства и контроля над процессом.
+            </p>
         </div>
       </div>
-    </nav>
-  </header>
 
-  <main id="page-blog" class="main">
-    <!-- Hero -->
-    <section class="section page-hero reveal-on-scroll">
-      <div class="container">
-        <h1>Блог Creative Work Pro Hub</h1>
-        <p>Идеи, кейсы и исследования из мира ИИ и творчества.</p>
-      </div>
-    </section>
-
-    <!-- Filters -->
-    <section id="blog-filters" class="section blog-filters reveal-on-scroll">
-      <div class="container">
-        <h2>Фильтровать статьи</h2>
-        <p>Блог запускается с подборкой базовых материалов. Позже здесь появятся фильтры по категориям, авторам и формату.</p>
-      </div>
-    </section>
-
-    <!-- Posts grid -->
-    <section id="blog-list" class="section blog-list reveal-on-scroll">
-      <div class="container">
-        <h2>Все статьи</h2>
-        <div class="blog-grid">
-          <article id="post-illustration-dalle" class="blog-post-card">
-            <span class="blog-tag">Практика · Иллюстрация</span>
-            <h3>DALL·E для иллюстраторов: от скетча до финальной иллюстрации</h3>
-            <p class="blog-meta">7 мин чтения · уровень: средний</p>
-            <p>Разбираем рабочий процесс: как использовать генеративные модели для поиска идей, референсов и фонов, сохраняя при этом авторский стиль.</p>
-          </article>
-          <article id="post-bim-workflows" class="blog-post-card">
-            <span class="blog-tag">Кейсы · Архитектура</span>
-            <h3>5 способов встроить ИИ в BIM-воркфлоу архитектурного бюро</h3>
-            <p class="blog-meta">9 мин чтения · уровень: продвинутый</p>
-            <p>На примере участников Innovation Lab показываем, как можно ускорить пресейл, концепт и визуализацию без потери качества.</p>
-          </article>
-          <article id="post-subscription-models" class="blog-post-card">
-            <span class="blog-tag">Стратегия · Студии</span>
-            <h3>Как креативным студиям строить подписочные продукты</h3>
-            <p class="blog-meta">8 мин чтения · уровень: стратегический</p>
-            <p>Разбираем уроки первых 12 месяцев работы Community Hub: какие форматы подписки работают, а какие нет.</p>
-          </article>
-          <article id="post-lab-grants" class="blog-post-card">
-            <span class="blog-tag">Innovation Lab · Гранты</span>
-            <h3>Как подать заявку на грант в Innovation Lab</h3>
-            <p class="blog-meta">6 мин чтения · для участников сообщества</p>
-            <p>Пошаговое руководство по подготовке заявки: от формулировки идеи до набора метрик успеха.</p>
-          </article>
+      <!-- Bottom Section: Contact Info -->
+      <div class="border-t border-blue-800 pt-8 mt-8">
+        <h3 class="text-sm font-bold uppercase tracking-widest mb-4 text-blue-300 flex items-center">
+             Контакты <i class="fas fa-arrow-right ml-2 text-xs"></i>
+        </h3>
+        <div class="space-y-3 text-sm text-gray-300">
+            <p class="flex items-center"><i class="fas fa-map-marker-alt w-5 mr-2 text-pale"></i> Digital Nomad HQ, Global</p>
+            <p class="flex items-center"><i class="fas fa-envelope w-5 mr-2 text-pale"></i> <a href="mailto:hello@creativeworkhub.io" class="hover:text-white underline decoration-blue-500 underline-offset-4">hello@creativeworkhub.io</a></p>
         </div>
       </div>
-    </section>
-  </main>
+    </aside>
 
-  <footer id="main-footer" class="footer">
-    <div class="container footer-content">
-      <div class="footer-section">
-        <h4>Компания</h4>
-        <ul>
-          <li><a href="about.html">О нас</a></li>
-          <li><a href="blog.html">Блог</a></li>
-          <li><a href="contact.html">Контакты</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Продукты</h4>
-        <ul>
-          <li><a href="services.html">Сервисы</a></li>
-          <li><a href="#">Подписка</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Правовые</h4>
-        <ul>
-          <li><a href="privacy.html">Политика конфиденциальности</a></li>
-          <li><a href="terms.html">Условия использования</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2024–2025 Creative Work Pro Hub. Все права защищены.</p>
-    </div>
-  </footer>
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="w-full md:w-[65%] bg-white h-full overflow-y-scroll">
 
+      <!-- Hero Image -->
+      <div class="w-full h-48 md:h-64 bg-gray-200 relative">
+          <img src="https://placehold.co/1200x400/1a36be/FFFFFF?text=Blog+Hero:+Ideas+and+Insights"
+               alt="Hero Image: Blog"
+               class="w-full h-full object-cover">
+          <div class="absolute bottom-0 left-0 bg-white/90 px-4 py-1 text-xs font-mono text-royal">
+              Generated by Nano Banana Pro
+          </div>
+      </div>
+
+      <div class="p-8 md:p-16 max-w-5xl mx-auto">
+
+        <!-- Page Title -->
+        <section class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 leading-tight mb-6">Блог</h1>
+            <p class="text-lg text-slate-600 leading-relaxed border-l-4 border-royal pl-6 italic">
+                Идеи, кейсы и исследования из мира ИИ и творчества.
+            </p>
+        </section>
+
+        <!-- Filters (Placeholder) -->
+        <section class="mb-12">
+             <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+                 <button class="px-4 py-2 bg-royal text-white text-sm font-bold rounded-full whitespace-nowrap">Все статьи</button>
+                 <button class="px-4 py-2 bg-gray-100 text-slate-600 hover:bg-gray-200 text-sm font-bold rounded-full whitespace-nowrap transition">Практика</button>
+                 <button class="px-4 py-2 bg-gray-100 text-slate-600 hover:bg-gray-200 text-sm font-bold rounded-full whitespace-nowrap transition">Кейсы</button>
+                 <button class="px-4 py-2 bg-gray-100 text-slate-600 hover:bg-gray-200 text-sm font-bold rounded-full whitespace-nowrap transition">Стратегия</button>
+                 <button class="px-4 py-2 bg-gray-100 text-slate-600 hover:bg-gray-200 text-sm font-bold rounded-full whitespace-nowrap transition">Innovation Lab</button>
+             </div>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="mb-16">
+            <div class="grid gap-12">
+
+                <!-- Post 1 -->
+                <article id="post-illustration-dalle" class="flex flex-col md:flex-row gap-8 items-start border-b border-gray-100 pb-12">
+                     <div class="w-full md:w-1/3 aspect-video bg-gray-200 rounded overflow-hidden">
+                          <img src="https://placehold.co/400x250/e0f7fa/1a36be?text=Illustration+Guide" alt="Thumbnail" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                     </div>
+                     <div class="w-full md:w-2/3">
+                         <div class="flex items-center gap-3 mb-2 text-xs font-bold uppercase tracking-widest text-royal">
+                             <span>Практика</span>
+                             <span class="text-gray-300">•</span>
+                             <span>Иллюстрация</span>
+                         </div>
+                         <h3 class="text-2xl font-bold text-slate-800 mb-3 hover:text-royal transition"><a href="#">DALL·E для иллюстраторов: от скетча до финальной иллюстрации</a></h3>
+                         <p class="text-slate-600 mb-4 leading-relaxed">Разбираем рабочий процесс: как использовать генеративные модели для поиска идей, референсов и фонов, сохраняя при этом авторский стиль.</p>
+                         <div class="text-xs text-gray-400 font-medium">7 мин чтения · уровень: средний</div>
+                     </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article id="post-bim-workflows" class="flex flex-col md:flex-row gap-8 items-start border-b border-gray-100 pb-12">
+                     <div class="w-full md:w-1/3 aspect-video bg-gray-200 rounded overflow-hidden">
+                          <img src="https://placehold.co/400x250/e0f7fa/1a36be?text=BIM+AI" alt="Thumbnail" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                     </div>
+                     <div class="w-full md:w-2/3">
+                         <div class="flex items-center gap-3 mb-2 text-xs font-bold uppercase tracking-widest text-royal">
+                             <span>Кейсы</span>
+                             <span class="text-gray-300">•</span>
+                             <span>Архитектура</span>
+                         </div>
+                         <h3 class="text-2xl font-bold text-slate-800 mb-3 hover:text-royal transition"><a href="#">5 способов встроить ИИ в BIM-воркфлоу архитектурного бюро</a></h3>
+                         <p class="text-slate-600 mb-4 leading-relaxed">На примере участников Innovation Lab показываем, как можно ускорить пресейл, концепт и визуализацию без потери качества.</p>
+                         <div class="text-xs text-gray-400 font-medium">9 мин чтения · уровень: продвинутый</div>
+                     </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article id="post-subscription-models" class="flex flex-col md:flex-row gap-8 items-start border-b border-gray-100 pb-12">
+                     <div class="w-full md:w-1/3 aspect-video bg-gray-200 rounded overflow-hidden">
+                          <img src="https://placehold.co/400x250/e0f7fa/1a36be?text=Studio+Strategy" alt="Thumbnail" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                     </div>
+                     <div class="w-full md:w-2/3">
+                         <div class="flex items-center gap-3 mb-2 text-xs font-bold uppercase tracking-widest text-royal">
+                             <span>Стратегия</span>
+                             <span class="text-gray-300">•</span>
+                             <span>Студии</span>
+                         </div>
+                         <h3 class="text-2xl font-bold text-slate-800 mb-3 hover:text-royal transition"><a href="#">Как креативным студиям строить подписочные продукты</a></h3>
+                         <p class="text-slate-600 mb-4 leading-relaxed">Разбираем уроки первых 12 месяцев работы Community Hub: какие форматы подписки работают, а какие нет.</p>
+                         <div class="text-xs text-gray-400 font-medium">8 мин чтения · уровень: стратегический</div>
+                     </div>
+                </article>
+
+                <!-- Post 4 -->
+                <article id="post-lab-grants" class="flex flex-col md:flex-row gap-8 items-start border-b border-gray-100 pb-12">
+                     <div class="w-full md:w-1/3 aspect-video bg-gray-200 rounded overflow-hidden">
+                          <img src="https://placehold.co/400x250/e0f7fa/1a36be?text=Grants+Guide" alt="Thumbnail" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                     </div>
+                     <div class="w-full md:w-2/3">
+                         <div class="flex items-center gap-3 mb-2 text-xs font-bold uppercase tracking-widest text-royal">
+                             <span>Innovation Lab</span>
+                             <span class="text-gray-300">•</span>
+                             <span>Гранты</span>
+                         </div>
+                         <h3 class="text-2xl font-bold text-slate-800 mb-3 hover:text-royal transition"><a href="#">Как подать заявку на грант в Innovation Lab</a></h3>
+                         <p class="text-slate-600 mb-4 leading-relaxed">Пошаговое руководство по подготовке заявки: от формулировки идеи до набора метрик успеха.</p>
+                         <div class="text-xs text-gray-400 font-medium">6 мин чтения · для участников</div>
+                     </div>
+                </article>
+            </div>
+        </section>
+
+      </div>
+
+      <!-- Footer Note -->
+      <footer class="p-8 text-center text-xs text-gray-400 bg-gray-50 border-t border-gray-200">
+        <p>© 2024–2025 Creative Work Pro Hub. Все права защищены.</p>
+      </footer>
+    </main>
+  </div>
   <script src="js/analytics.js"></script>
   <script src="js/main.js"></script>
   <script src="js/forms.js"></script>
-  <script src="js/scroll-animation.js"></script>
 </body>
 </html>

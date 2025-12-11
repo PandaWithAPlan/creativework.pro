@@ -3,211 +3,226 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Сервисы и тарифы — Creative Work Pro Hub</title>
+  <title>Сервисы и Тарифы — Creative Work Pro Hub</title>
   <meta name="description" content="Консалтинг, воркшопы и ИИ-инструменты для творческих профессионалов.">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: {
+              DEFAULT: '#1a36be',
+              light: '#2563EB',
+            },
+            pale: '#e0f7fa',
+            slate: {
+              800: '#334155',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          letterSpacing: {
+            widest: '.2em',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="page-services">
-  <header id="main-header" class="header">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-content">
-          <div class="navbar-logo"><a href="index.html">Creative Work Pro Hub</a></div>
-          <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="services.html" class="is-active">Сервисы</a></li>
-            <li><a href="blog.html">Блог</a></li>
-            <li><a href="contact.html">Контакты</a></li>
+<body class="font-sans antialiased text-slate-800">
+
+  <div class="flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="w-full md:w-[35%] bg-royal text-white flex flex-col justify-between p-8 md:p-12 md:h-full overflow-y-auto shrink-0">
+
+      <!-- Top Section -->
+      <div>
+        <!-- Logo -->
+        <div class="mb-10">
+          <a href="index.html" class="text-2xl font-bold tracking-tight text-white hover:text-gray-200 transition">
+            CREATIVE WORK<br>PRO HUB
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="mb-12">
+          <ul class="space-y-4 text-lg font-medium">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Главная</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>О нас</a></li>
+            <li><a href="services.html" class="text-white hover:text-pale transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3"></span>Сервисы</a></li>
+            <li><a href="blog.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Блог</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Контакты</a></li>
           </ul>
-          <button class="navbar-toggle" id="mobile-menu-btn">☰</button>
+        </nav>
+
+        <!-- Project Description -->
+        <div class="mb-12">
+            <h3 class="text-sm font-bold uppercase tracking-widest mb-4 text-blue-300">О проекте</h3>
+            <p class="text-gray-300 leading-relaxed text-sm">
+                Creative Work Pro Hub объединяет сообщество, практические сервисы и Innovation Lab, чтобы помочь вам встроить ИИ в ежедневную творческую практику — без потери авторства и контроля над процессом.
+            </p>
         </div>
       </div>
-    </nav>
-  </header>
 
-  <main id="page-services" class="main">
-    <!-- Hero -->
-    <section class="section page-hero reveal-on-scroll">
-      <div class="container">
-        <h1>Сервисы и тарифы</h1>
-        <p>Три уровня экосистемы, консалтинг, воркшопы и ИИ-инструменты — в одном месте.</p>
-      </div>
-    </section>
-
-    <!-- Three Levels -->
-    <section id="services-levels" class="section services-levels reveal-on-scroll">
-      <div class="container">
-        <h2>Три уровня экосистемы</h2>
-        <p class="section-subtitle">От ядра сообщества до витрины инноваций — каждый уровень усиливает предыдущий.</p>
-        <div class="services-levels-grid">
-          <article class="services-level-card">
-            <h3>Уровень 1: Community Hub</h3>
-            <p>Подписочная модель ($9–$79/месяц), которая даёт доступ к сообществу, образовательному контенту и регулярным воркшопам.</p>
-            <ul>
-              <li>40–50% общей выручки (MRR/ARR).</li>
-              <li>Фокус: сообщество, доверие, удержание.</li>
-              <li>Тарифы Explorer, Creator, Innovator.</li>
-            </ul>
-          </article>
-          <article class="services-level-card">
-            <h3>Уровень 2: Services &amp; Tools</h3>
-            <p>Консалтинг, корпоративные воркшопы и отобранные ИИ-инструменты для команд и студий.</p>
-            <ul>
-              <li>40–45% выручки.</li>
-              <li>Фокус: B2B, образование, инфраструктура для творческих практик.</li>
-              <li>Пакеты Starter Kit, Guided Project, Team Workshop, Retainer.</li>
-            </ul>
-          </article>
-          <article class="services-level-card">
-            <h3>Уровень 3: Innovation Lab</h3>
-            <p>R&amp;D‑лаборатория, гранты и спонсорские проекты, которые двигают вперёд весь хаб.</p>
-            <ul>
-              <li>10–15% выручки, но максимум влияния на бренд и PR.</li>
-              <li>Фокус: эксперименты, выставки, публикации.</li>
-              <li>Гранты €5k–€50k и спонсорство €20k–€100k.</li>
-            </ul>
-          </article>
+      <!-- Bottom Section: Contact Info -->
+      <div class="border-t border-blue-800 pt-8 mt-8">
+        <h3 class="text-sm font-bold uppercase tracking-widest mb-4 text-blue-300 flex items-center">
+             Контакты <i class="fas fa-arrow-right ml-2 text-xs"></i>
+        </h3>
+        <div class="space-y-3 text-sm text-gray-300">
+            <p class="flex items-center"><i class="fas fa-map-marker-alt w-5 mr-2 text-pale"></i> Digital Nomad HQ, Global</p>
+            <p class="flex items-center"><i class="fas fa-envelope w-5 mr-2 text-pale"></i> <a href="mailto:hello@creativeworkhub.io" class="hover:text-white underline decoration-blue-500 underline-offset-4">hello@creativeworkhub.io</a></p>
         </div>
       </div>
-    </section>
+    </aside>
 
-    <!-- Consulting -->
-    <section id="services-consulting" class="section services-consulting reveal-on-scroll">
-      <div class="container">
-        <h2>Консалтинг</h2>
-        <p class="section-subtitle">Четыре формата сопровождения — от быстрых стартовых сессий до стратегического ретейнера для студий и команд.</p>
-        <div class="consulting-grid">
-          <article class="consulting-card">
-            <h3>Starter Kit</h3>
-            <p class="consulting-tagline">2–3 недели, чтобы безопасно и осознанно начать работать с ИИ.</p>
-            <ul class="consulting-features">
-              <li>Аудит текущих рабочих процессов и инструментов.</li>
-              <li>Подбор 3–5 релевантных ИИ-сервисов под вашу вертикаль.</li>
-              <li>Базовый плейбук внедрения для команды.</li>
-            </ul>
-            <p class="consulting-price">Ориентир: от €1,500 за проект.</p>
-            <a href="contact.html#contact-forms" class="btn btn-secondary">Запросить Starter Kit</a>
-          </article>
-          <article class="consulting-card">
-            <h3>Guided Project</h3>
-            <p class="consulting-tagline">6–8 недель работы над одним ключевым проектом с куратором.</p>
-            <ul class="consulting-features">
-              <li>Совместный дизайн пайплайна: от брифа до результата.</li>
-              <li>Еженедельные созвоны и ревью промежуточных артефактов.</li>
-              <li>Передача команде готовых скриптов, шаблонов и гайдов.</li>
-            </ul>
-            <p class="consulting-price">Ориентир: €4,000–€9,000 в зависимости от масштаба.</p>
-            <a href="contact.html#contact-forms" class="btn btn-secondary">Обсудить Guided Project</a>
-          </article>
-          <article class="consulting-card">
-            <h3>Team Workshop</h3>
-            <p class="consulting-tagline">Интерактивные воркшопы для креативных команд и студий.</p>
-            <ul class="consulting-features">
-              <li>1–2 дня онлайн или офлайн с живыми демо и практикой.</li>
-              <li>Кейсы под вашу индустрию и набор шаблонов по итогам.</li>
-              <li>Опция follow-up-сессии через 4–6 недель.</li>
-            </ul>
-            <p class="consulting-price">Ориентир: €3,000–€8,000 за воркшоп.</p>
-            <a href="contact.html#contact-forms" class="btn btn-secondary">Запросить воркшоп</a>
-          </article>
-          <article class="consulting-card">
-            <h3>Retainer</h3>
-            <p class="consulting-tagline">Долгосрочное партнёрство для студий и организаций.</p>
-            <ul class="consulting-features">
-              <li>Ежемесячные стратегические сессии и ревью проектов.</li>
-              <li>Приоритетный доступ к программам Innovation Lab.</li>
-              <li>Поддержка в подготовке грантовых заявок и пилотных предложений.</li>
-            </ul>
-            <p class="consulting-price">Ориентир: от €2,000/мес, условия обсуждаются индивидуально.</p>
-            <a href="contact.html#contact-forms" class="btn btn-secondary">Обсудить ретейнер</a>
-          </article>
-        </div>
-      </div>
-    </section>
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="w-full md:w-[65%] bg-white h-full overflow-y-scroll">
 
-    <!-- Workshops -->
-    <section id="services-workshops" class="section services-workshops reveal-on-scroll">
-      <div class="container">
-        <h2>Воркшопы и курсы</h2>
-        <p class="section-subtitle">Placeholder для списка популярных воркшопов (DALL-E для дизайнеров, 3D-печать + ИИ, видео-монтаж и т.д.).</p>
-        <div class="workshops-grid">
-          <!-- Список воркшопов и CTA "Смотреть календарь воркшопов" -->
-        </div>
+      <!-- Hero Image -->
+      <div class="w-full h-48 md:h-64 bg-gray-200 relative">
+          <img src="https://placehold.co/1200x400/1a36be/FFFFFF?text=Services+Hero:+Workshops+and+Tools"
+               alt="Hero Image: Workshops and Tools"
+               class="w-full h-full object-cover">
+          <div class="absolute bottom-0 left-0 bg-white/90 px-4 py-1 text-xs font-mono text-royal">
+              Generated by Nano Banana Pro
+          </div>
       </div>
-    </section>
 
-    <!-- Tools -->
-    <section id="services-tools" class="section services-tools reveal-on-scroll">
-      <div class="container">
-        <h2>ИИ-инструменты</h2>
-        <p class="section-subtitle">Placeholder для таблицы инструментов по категориям (изображения, видео, звук, текст, 3D).</p>
-        <div class="tools-table">
-          <!-- Таблица/список инструментов будет перенесён из Content PDF -->
-        </div>
-      </div>
-    </section>
+      <div class="p-8 md:p-16 max-w-5xl mx-auto">
 
-    <!-- Pricing summary -->
-    <section id="services-pricing" class="section services-pricing reveal-on-scroll">
-      <div class="container">
-        <h2>Тарифы и планы</h2>
-        <p class="section-subtitle">Три уровня подписки Community Hub подойдут для разных этапов практики — от первых шагов до масштабирования студии.</p>
-        <div class="services-pricing-grid">
-          <article class="services-pricing-card">
-            <h3>Explorer</h3>
-            <p>$9/мес — базовый доступ к сообществу, библиотеке гайдов и открытым вызовам Innovation Lab.</p>
-          </article>
-          <article class="services-pricing-card">
-            <h3>Creator</h3>
-            <p>$29/мес — расширенный доступ к воркшопам, практическим трекам и приоритет в ревью работ.</p>
-          </article>
-          <article class="services-pricing-card">
-            <h3>Innovator</h3>
-            <p>$79/мес — максимум взаимодействия, малые группы, стратегические сессии и приоритет в пилотах Innovation Lab.</p>
-          </article>
-        </div>
-        <p class="services-pricing-note">Подробную таблицу преимуществ и годовые цены смотрите в блоке <a href="index.html#pricing">«Прозрачное ценообразование»</a> на главной странице.</p>
-      </div>
-    </section>
-  </main>
+        <!-- Page Title -->
+        <section class="mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 leading-tight mb-6">Сервисы и Тарифы</h1>
+            <p class="text-lg text-slate-600 leading-relaxed border-l-4 border-royal pl-6 italic">
+                Три уровня экосистемы, консалтинг, воркшопы и ИИ-инструменты — в одном месте.
+            </p>
+        </section>
 
-  <footer id="main-footer" class="footer">
-    <div class="container footer-content">
-      <div class="footer-section">
-        <h4>Компания</h4>
-        <ul>
-          <li><a href="about.html">О нас</a></li>
-          <li><a href="blog.html">Блог</a></li>
-          <li><a href="contact.html">Контакты</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Продукты</h4>
-        <ul>
-          <li><a href="services.html">Сервисы</a></li>
-          <li><a href="#">Подписка</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Правовые</h4>
-        <ul>
-          <li><a href="privacy.html">Политика конфиденциальности</a></li>
-          <li><a href="terms.html">Условия использования</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2024–2025 Creative Work Pro Hub. Все права защищены.</p>
-    </div>
-  </footer>
+        <!-- 3 Levels Breakdown -->
+        <section class="mb-16">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-6 flex items-center border-b border-gray-200 pb-2">
+                <i class="fas fa-layer-group mr-2"></i> Три уровня экосистемы
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Level 1 -->
+                <article class="bg-gray-50 p-6 rounded-lg border border-transparent hover:border-royal transition">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">1. Community Hub</h3>
+                    <p class="text-sm text-slate-600 mb-4">Подписочная модель ($9–$79/мес). Доступ к сообществу и контенту.</p>
+                    <ul class="text-xs text-slate-500 list-disc ml-4 space-y-1">
+                        <li>Фокус: Сообщество и удержание.</li>
+                        <li>Тарифы: Explorer, Creator, Innovator.</li>
+                    </ul>
+                </article>
+                 <!-- Level 2 -->
+                <article class="bg-gray-50 p-6 rounded-lg border border-transparent hover:border-royal transition">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">2. Services & Tools</h3>
+                    <p class="text-sm text-slate-600 mb-4">Консалтинг и инструменты для команд и студий.</p>
+                    <ul class="text-xs text-slate-500 list-disc ml-4 space-y-1">
+                        <li>Фокус: B2B и инфраструктура.</li>
+                        <li>Пакеты: Workshops, Retainers.</li>
+                    </ul>
+                </article>
+                 <!-- Level 3 -->
+                <article class="bg-gray-50 p-6 rounded-lg border border-transparent hover:border-royal transition">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">3. Innovation Lab</h3>
+                    <p class="text-sm text-slate-600 mb-4">R&D-лаборатория, гранты и спонсорские проекты.</p>
+                    <ul class="text-xs text-slate-500 list-disc ml-4 space-y-1">
+                        <li>Фокус: Эксперименты и PR.</li>
+                        <li>Гранты: €5k–€50k.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
 
+        <!-- Consulting Services -->
+        <section class="mb-16">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-8 flex items-center border-b border-gray-200 pb-2">
+                <i class="fas fa-briefcase mr-2"></i> Консалтинг
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Service 1 -->
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800">Starter Kit</h3>
+                    <p class="text-sm text-royal font-bold mb-4">2–3 недели • от €1,500</p>
+                    <p class="text-sm text-slate-600 mb-4">Аудит процессов, подбор 3–5 ИИ-сервисов, базовый плейбук внедрения.</p>
+                    <div class="mt-auto">
+                        <a href="contact.html" class="text-sm font-bold text-royal hover:underline">Запросить Starter Kit →</a>
+                    </div>
+                </div>
+                 <!-- Service 2 -->
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800">Guided Project</h3>
+                    <p class="text-sm text-royal font-bold mb-4">6–8 недель • €4,000–€9,000</p>
+                    <p class="text-sm text-slate-600 mb-4">Работа над одним ключевым проектом с куратором. Дизайн пайплайна, ревью, передача скриптов.</p>
+                    <div class="mt-auto">
+                        <a href="contact.html" class="text-sm font-bold text-royal hover:underline">Обсудить проект →</a>
+                    </div>
+                </div>
+                 <!-- Service 3 -->
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800">Team Workshop</h3>
+                    <p class="text-sm text-royal font-bold mb-4">1–2 дня • €3,000–€8,000</p>
+                    <p class="text-sm text-slate-600 mb-4">Интерактив для команд. Живые демо, кейсы под индустрию, шаблоны.</p>
+                    <div class="mt-auto">
+                        <a href="contact.html" class="text-sm font-bold text-royal hover:underline">Запросить воркшоп →</a>
+                    </div>
+                </div>
+                 <!-- Service 4 -->
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800">Retainer</h3>
+                    <p class="text-sm text-royal font-bold mb-4">Долгосрочно • от €2,000/мес</p>
+                    <p class="text-sm text-slate-600 mb-4">Стратегические сессии, приоритет в Innovation Lab, помощь с грантами.</p>
+                    <div class="mt-auto">
+                        <a href="contact.html" class="text-sm font-bold text-royal hover:underline">Обсудить партнерство →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Summary -->
+        <section class="bg-blue-50 rounded-xl p-8 mb-16">
+             <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-4">Тарифы Community Hub</h2>
+             <p class="text-sm text-slate-600 mb-6">Подробную таблицу преимуществ смотрите на <a href="index.html#pricing" class="underline text-royal">Главной странице</a>.</p>
+             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                 <div class="bg-white p-4 rounded shadow-sm">
+                     <div class="font-bold text-slate-800">Explorer</div>
+                     <div class="text-royal font-bold">$9/мес</div>
+                 </div>
+                 <div class="bg-white p-4 rounded shadow-sm border border-royal">
+                     <div class="font-bold text-slate-800">Creator</div>
+                     <div class="text-royal font-bold">$29/мес</div>
+                 </div>
+                 <div class="bg-white p-4 rounded shadow-sm">
+                     <div class="font-bold text-slate-800">Innovator</div>
+                     <div class="text-royal font-bold">$79/мес</div>
+                 </div>
+             </div>
+        </section>
+
+      </div>
+
+      <!-- Footer Note -->
+      <footer class="p-8 text-center text-xs text-gray-400 bg-gray-50 border-t border-gray-200">
+        <p>© 2024–2025 Creative Work Pro Hub. Все права защищены.</p>
+      </footer>
+    </main>
+  </div>
   <script src="js/analytics.js"></script>
   <script src="js/main.js"></script>
   <script src="js/forms.js"></script>
-  <script src="js/scroll-animation.js"></script>
 </body>
 </html>

@@ -3,165 +3,234 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Связаться с нами — Creative Work Pro Hub</title>
+  <title>Контакты — Creative Work Pro Hub</title>
   <meta name="description" content="Контакты, офисы и формы связи Creative Work Pro Hub.">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: {
+              DEFAULT: '#1a36be',
+              light: '#2563EB',
+            },
+            pale: '#e0f7fa',
+            slate: {
+              800: '#334155',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          letterSpacing: {
+            widest: '.2em',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="page-contact">
-  <header id="main-header" class="header">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-content">
-          <div class="navbar-logo"><a href="index.html">Creative Work Pro Hub</a></div>
-          <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="services.html">Сервисы</a></li>
-            <li><a href="blog.html">Блог</a></li>
-            <li><a href="contact.html" class="is-active">Контакты</a></li>
+<body class="font-sans antialiased text-slate-800">
+
+  <div class="flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="w-full md:w-[35%] bg-royal text-white flex flex-col justify-between p-8 md:p-12 md:h-full overflow-y-auto shrink-0">
+
+      <!-- Top Section -->
+      <div>
+        <!-- Logo -->
+        <div class="mb-10">
+          <a href="index.html" class="text-2xl font-bold tracking-tight text-white hover:text-gray-200 transition">
+            CREATIVE WORK<br>PRO HUB
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="mb-12">
+          <ul class="space-y-4 text-lg font-medium">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Главная</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>О нас</a></li>
+            <li><a href="services.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Сервисы</a></li>
+            <li><a href="blog.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Блог</a></li>
+            <li><a href="contact.html" class="text-white hover:text-pale transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3"></span>Контакты</a></li>
           </ul>
-          <button class="navbar-toggle" id="mobile-menu-btn">☰</button>
+        </nav>
+
+        <!-- Project Description -->
+        <div class="mb-12">
+            <h3 class="text-sm font-bold uppercase tracking-widest mb-4 text-blue-300">О проекте</h3>
+            <p class="text-gray-300 leading-relaxed text-sm">
+                Creative Work Pro Hub объединяет сообщество, практические сервисы и Innovation Lab, чтобы помочь вам встроить ИИ в ежедневную творческую практику — без потери авторства и контроля над процессом.
+            </p>
         </div>
       </div>
-    </nav>
-  </header>
 
-  <main id="page-contact" class="main">
-    <!-- Hero -->
-    <section class="section page-hero">
-      <div class="container">
-        <h1>Свяжитесь с нами</h1>
-        <p>Выберите формат: общий вопрос, запрос на консалтинг, партнёрство или прессу. Мы обычно отвечаем в течение 24 часов (CET).</p>
-      </div>
-    </section>
-
-    <!-- Contact info + offices -->
-    <section id="contact-info" class="section contact-info">
-      <div class="container">
-        <h2>Контактная информация</h2>
-        <div class="contact-grid">
-          <div class="contact-details">
-            <p><strong>Email для общих вопросов:</strong> <a href="mailto:hello@creativeworkhub.io">hello@creativeworkhub.io</a></p>
-            <p><strong>Email для партнёрств и прессы:</strong> <a href="mailto:partners@creativeworkhub.io">partners@creativeworkhub.io</a></p>
-            <p><strong>Телефон (HQ):</strong> +49 30 XXX XXXX (Берлин, CET)</p>
-          </div>
-          <div class="contact-offices">
-            <h3>Офисы</h3>
-            <ul>
-              <li>Берлин, Германия — HQ</li>
-              <li>Нью-Йорк, США</li>
-              <li>Лос-Анджелес, США</li>
-            </ul>
-          </div>
+      <!-- Bottom Section: Contact Info -->
+      <div class="border-t border-blue-800 pt-8 mt-8">
+        <h3 class="text-sm font-bold uppercase tracking-widest mb-4 text-blue-300 flex items-center">
+             Контакты <i class="fas fa-arrow-right ml-2 text-xs"></i>
+        </h3>
+        <div class="space-y-3 text-sm text-gray-300">
+            <p class="flex items-center"><i class="fas fa-map-marker-alt w-5 mr-2 text-pale"></i> Digital Nomad HQ, Global</p>
+            <p class="flex items-center"><i class="fas fa-envelope w-5 mr-2 text-pale"></i> <a href="mailto:hello@creativeworkhub.io" class="hover:text-white underline decoration-blue-500 underline-offset-4">hello@creativeworkhub.io</a></p>
         </div>
       </div>
-    </section>
+    </aside>
 
-    <!-- Forms -->
-    <section id="contact-forms" class="section contact-forms">
-      <div class="container">
-        <div class="home-contact-grid">
-          <div class="contact-form-wrapper">
-            <h2>Общая контактная форма</h2>
-            <form id="contact-form" class="contact-form" action="api/contact.php" method="post">
-              <label for="contact-name">Имя*</label>
-              <input type="text" id="contact-name" name="name" placeholder="Ваше имя" required>
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="w-full md:w-[65%] bg-white h-full overflow-y-scroll">
 
-              <label for="contact-email">Email*</label>
-              <input type="email" id="contact-email" name="email" placeholder="you@example.com" required>
-
-              <label for="contact-subject">Тема</label>
-              <select id="contact-subject" name="subject">
-                <option value="general">Общий вопрос</option>
-                <option value="community">Подписка и сообщество</option>
-                <option value="tools">ИИ-инструменты</option>
-                <option value="support">Техническая поддержка</option>
-              </select>
-
-              <label for="contact-message">Сообщение*</label>
-              <textarea id="contact-message" name="message" rows="5" placeholder="Расскажите, чем мы можем помочь" required></textarea>
-
-              <button type="submit" class="btn btn-primary">Отправить сообщение</button>
-              <p class="form-note">Форма отправляет данные на тестовый endpoint; обратная связь может быть обработана вручную.</p>
-            </form>
+      <!-- Hero Image -->
+      <div class="w-full h-48 md:h-64 bg-gray-200 relative">
+          <img src="https://placehold.co/1200x400/1a36be/FFFFFF?text=Contact+Hero:+Get+in+Touch"
+               alt="Hero Image: Contact"
+               class="w-full h-full object-cover">
+          <div class="absolute bottom-0 left-0 bg-white/90 px-4 py-1 text-xs font-mono text-royal">
+              Generated by Nano Banana Pro
           </div>
-          <div class="consulting-form-wrapper">
-            <h2>Заявка на консалтинг</h2>
-            <form id="consulting-form" class="contact-form" action="api/contact.php" method="post">
-              <label for="consulting-name">Имя*</label>
-              <input type="text" id="consulting-name" name="name" placeholder="Ваше имя" required>
-
-              <label for="consulting-email">Email*</label>
-              <input type="email" id="consulting-email" name="email" placeholder="you@example.com" required>
-
-              <label for="consulting-company">Компания / студия</label>
-              <input type="text" id="consulting-company" name="company" placeholder="Название компании">
-
-              <label for="consulting-package">Интересующий формат</label>
-              <select id="consulting-package" name="package">
-                <option value="starter">Starter Kit</option>
-                <option value="guided">Guided Project</option>
-                <option value="workshop">Team Workshop</option>
-                <option value="retainer">Retainer</option>
-                <option value="other">Другое / не уверен(а)</option>
-              </select>
-
-              <label for="consulting-message">Краткое описание запроса*</label>
-              <textarea id="consulting-message" name="message" rows="5" placeholder="Расскажите о вашей команде, проектах и целях" required></textarea>
-
-              <label for="consulting-budget">Ориентировочный бюджет</label>
-              <select id="consulting-budget" name="budget">
-                <option value="<5k">до €5k</option>
-                <option value="5-15k">€5k–€15k</option>
-                <option value="15-50k">€15k–€50k</option>
-                <option value="50k+">€50k+</option>
-              </select>
-
-              <button type="submit" class="btn btn-secondary">Отправить заявку</button>
-              <p class="form-note">После отправки мы свяжемся с вами, чтобы уточнить детали и предложить формат работы.</p>
-            </form>
-          </div>
-        </div>
       </div>
-    </section>
-  </main>
 
-  <footer id="main-footer" class="footer">
-    <div class="container footer-content">
-      <div class="footer-section">
-        <h4>Компания</h4>
-        <ul>
-          <li><a href="about.html">О нас</a></li>
-          <li><a href="blog.html">Блог</a></li>
-          <li><a href="contact.html">Контакты</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Продукты</h4>
-        <ul>
-          <li><a href="services.html">Сервисы</a></li>
-          <li><a href="#">Подписка</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Правовые</h4>
-        <ul>
-          <li><a href="privacy.html">Политика конфиденциальности</a></li>
-          <li><a href="terms.html">Условия использования</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2024–2025 Creative Work Pro Hub. Все права защищены.</p>
-    </div>
-  </footer>
+      <div class="p-8 md:p-16 max-w-5xl mx-auto">
 
+        <!-- Page Title -->
+        <section class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 leading-tight mb-6">Свяжитесь с нами</h1>
+            <p class="text-lg text-slate-600 leading-relaxed border-l-4 border-royal pl-6 italic">
+                Мы обычно отвечаем в течение 24 часов (CET).
+            </p>
+        </section>
+
+        <!-- Contact Info & Offices -->
+        <section class="mb-16">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-6 flex items-center border-b border-gray-200 pb-2">
+                <i class="fas fa-info-circle mr-2"></i> Инфо и Офисы
+            </h2>
+             <div class="grid md:grid-cols-2 gap-8">
+                 <div>
+                     <h3 class="font-bold text-lg text-slate-800 mb-4">Прямые контакты</h3>
+                     <ul class="space-y-3 text-sm text-slate-600">
+                         <li><strong>Общие вопросы:</strong> <a href="mailto:hello@creativeworkhub.io" class="text-royal hover:underline">hello@creativeworkhub.io</a></li>
+                         <li><strong>Партнёрство и Пресса:</strong> <a href="mailto:partners@creativeworkhub.io" class="text-royal hover:underline">partners@creativeworkhub.io</a></li>
+                         <li><strong>Телефон (HQ):</strong> +49 30 XXX XXXX (Берлин, CET)</li>
+                     </ul>
+                 </div>
+                 <div class="bg-gray-50 p-6 rounded-lg">
+                     <h3 class="font-bold text-lg text-slate-800 mb-4">Офисы</h3>
+                     <ul class="space-y-2 text-sm text-slate-600">
+                         <li class="flex items-center"><i class="fas fa-map-pin text-royal mr-3 w-4"></i> Берлин, Германия — HQ</li>
+                         <li class="flex items-center"><i class="fas fa-map-pin text-gray-400 mr-3 w-4"></i> Нью-Йорк, США</li>
+                         <li class="flex items-center"><i class="fas fa-map-pin text-gray-400 mr-3 w-4"></i> Лос-Анджелес, США</li>
+                     </ul>
+                 </div>
+             </div>
+        </section>
+
+        <!-- Forms -->
+        <section id="contact-forms" class="mb-16">
+             <div class="grid md:grid-cols-2 gap-12">
+
+                 <!-- General Form -->
+                 <div>
+                     <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-6 flex items-center border-b border-gray-200 pb-2">
+                        <i class="fas fa-envelope mr-2"></i> Общий вопрос
+                    </h2>
+                     <form action="api/contact.php" method="post" class="space-y-4">
+                         <div>
+                             <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Имя*</label>
+                             <input type="text" name="name" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-royal transition" placeholder="Ваше имя" required>
+                         </div>
+                         <div>
+                             <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Email*</label>
+                             <input type="email" name="email" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-royal transition" placeholder="you@example.com" required>
+                         </div>
+                         <div>
+                             <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Тема</label>
+                             <select name="subject" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-royal transition bg-white">
+                                <option value="general">Общий вопрос</option>
+                                <option value="community">Подписка и сообщество</option>
+                                <option value="tools">ИИ-инструменты</option>
+                                <option value="support">Техническая поддержка</option>
+                             </select>
+                         </div>
+                         <div>
+                             <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Сообщение*</label>
+                             <textarea name="message" rows="4" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-royal transition" placeholder="Как мы можем помочь?" required></textarea>
+                         </div>
+                         <button type="submit" class="px-6 py-3 bg-royal text-white font-bold rounded hover:bg-blue-700 transition w-full">Отправить сообщение</button>
+                     </form>
+                 </div>
+
+                 <!-- Consulting Form -->
+                 <div class="bg-blue-50 p-8 rounded-lg">
+                     <h2 class="text-sm font-bold uppercase tracking-widest text-royal mb-6 flex items-center border-b border-blue-200 pb-2">
+                        <i class="fas fa-briefcase mr-2"></i> Заявка на консалтинг
+                    </h2>
+                     <form action="api/contact.php" method="post" class="space-y-4">
+                         <div>
+                             <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Имя*</label>
+                             <input type="text" name="name" class="w-full border border-blue-200 p-3 rounded focus:outline-none focus:border-royal transition" placeholder="Ваше имя" required>
+                         </div>
+                         <div>
+                             <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Email*</label>
+                             <input type="email" name="email" class="w-full border border-blue-200 p-3 rounded focus:outline-none focus:border-royal transition" placeholder="you@example.com" required>
+                         </div>
+                         <div>
+                             <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Компания</label>
+                             <input type="text" name="company" class="w-full border border-blue-200 p-3 rounded focus:outline-none focus:border-royal transition" placeholder="Студия / Бренд">
+                         </div>
+                         <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Формат</label>
+                                <select name="package" class="w-full border border-blue-200 p-3 rounded focus:outline-none focus:border-royal transition bg-white text-sm">
+                                    <option value="starter">Starter Kit</option>
+                                    <option value="guided">Guided Project</option>
+                                    <option value="workshop">Workshop</option>
+                                    <option value="retainer">Retainer</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Бюджет</label>
+                                <select name="budget" class="w-full border border-blue-200 p-3 rounded focus:outline-none focus:border-royal transition bg-white text-sm">
+                                    <option value="<5k">до €5k</option>
+                                    <option value="5-15k">€5-15k</option>
+                                    <option value="15-50k">€15-50k</option>
+                                    <option value="50k+">€50k+</option>
+                                </select>
+                            </div>
+                         </div>
+                         <div>
+                             <label class="block text-xs font-bold uppercase text-gray-500 mb-1">О проекте*</label>
+                             <textarea name="message" rows="3" class="w-full border border-blue-200 p-3 rounded focus:outline-none focus:border-royal transition" placeholder="Кратко о целях и команде" required></textarea>
+                         </div>
+                         <button type="submit" class="px-6 py-3 bg-white text-royal border-2 border-royal font-bold rounded hover:bg-blue-50 transition w-full">Отправить заявку</button>
+                     </form>
+                 </div>
+
+             </div>
+        </section>
+
+      </div>
+
+      <!-- Footer Note -->
+      <footer class="p-8 text-center text-xs text-gray-400 bg-gray-50 border-t border-gray-200">
+        <p>© 2024–2025 Creative Work Pro Hub. Все права защищены.</p>
+      </footer>
+    </main>
+  </div>
   <script src="js/analytics.js"></script>
   <script src="js/main.js"></script>
   <script src="js/forms.js"></script>
-  <script src="js/scroll-animation.js"></script>
 </body>
 </html>
