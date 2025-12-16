@@ -1,19 +1,71 @@
-# creativework.pro
+# Creative Work Pro Hub
 
-Website repository for creativework.pro. This repository contains the source code and assets for the creativework.pro website.
+**Creative Work Pro Hub** — это экосистема, объединяющая сообщество, практические сервисы и Innovation Lab для творческих профессионалов, стремящихся интегрировать искусственный интеллект в свою ежедневную практику.
 
-## Overview
+## О проекте
 
-The project is currently a small static website with the following main parts:
-- An HTML entry point (`index.html`)
-- A main stylesheet (`style.css`)
-- Node package metadata (`package.json`, `package-lock.json`) for tooling or future build steps
-- Additional markdown notes (`test.md`) and a `tests/` directory reserved for testing or experiments
+Проект представляет собой статический веб-сайт с современным дизайном в стиле "коммерческого предложения" (Proposal Style). Основная цель — предоставить информацию о сообществе, услугах консалтинга и образовательных материалах в чистом, профессиональном формате.
 
-## Tech stack
+### Ключевые особенности
+*   **Двухколоночный макет (Split Screen):** Фиксированный навигационный сайдбар слева (Royal Blue) и прокручиваемая контентная область справа (White).
+*   **Адаптивность:** На мобильных устройствах макет трансформируется в вертикальный стек с упрощенной навигацией.
+*   **Единая дизайн-система:** Централизованная конфигурация цветов и типографики.
 
-- **HTML5** — structure and content of the website (`index.html`)
-- **CSS3** — styling and layout (`style.css`)
-- **Node.js + npm** — used for dependency management and tooling via `package.json` / `package-lock.json`
+## Технологический стек
 
-Currently the site is implemented as a static frontend without a backend server component; it can be served by any static file server or directly via GitHub Pages or similar hosting.
+*   **HTML5:** Семантическая разметка страниц (`index.html`, `about.html`, `services.html` и др.).
+*   **Tailwind CSS (CDN):** Утилитарный CSS-фреймворк для стилизации. Подключается через CDN.
+*   **JavaScript (Vanilla):**
+    *   `js/tailwind-config.js`: Централизованная конфигурация темы Tailwind (цвета, шрифты).
+    *   `js/main.js`: Логика UI (скролл, мобильное меню).
+    *   `js/forms.js`: Обработка форм (валидация, имитация отправки).
+    *   `js/analytics.js`: Скрипт аналитики (заглушка).
+
+## Структура проекта
+
+```text
+.
+├── index.html          # Главная страница
+├── about.html          # Страница "О нас"
+├── services.html       # Страница услуг и сервисов
+├── blog.html           # Блог и статьи
+├── contact.html        # Контакты и формы обратной связи
+├── faq.html            # Часто задаваемые вопросы
+├── js/
+│   ├── tailwind-config.js  # Конфигурация дизайн-системы
+│   ├── main.js             # Основные скрипты
+│   └── forms.js            # Логика форм
+├── img/
+│   └── hero/               # Изображения (Hero image)
+└── ...
+```
+
+## Дизайн-система
+
+### Цветовая палитра
+*   **Primary (Royal Blue):** `#1a36be` — Фон сайдбара, акцентные кнопки, заголовки.
+*   **Secondary (Pale Blue):** `#e0f7fa` — Фон блоков статистики, декоративные элементы.
+*   **Text (Slate):** `#334155` — Основной текст.
+*   **White:** `#FFFFFF` — Фон контента, текст в сайдбаре.
+
+### Типографика
+*   **Шрифт:** Inter (sans-serif).
+*   **Заголовки:** Прописные (Uppercase), увеличенный межбуквенный интервал (tracking-widest), жирное начертание.
+
+## Установка и запуск
+
+Поскольку проект является статическим веб-сайтом, установка зависимостей не требуется для просмотра.
+
+1.  Клонируйте репозиторий.
+2.  Откройте файл `index.html` в любом современном веб-браузере.
+
+## Разработка
+
+Для внесения изменений в стили рекомендуется редактировать классы Tailwind непосредственно в HTML-файлах или обновлять конфигурацию в `js/tailwind-config.js`.
+
+**Важно:** Все HTML-файлы должны ссылаться на `js/tailwind-config.js` после подключения скрипта Tailwind CDN для корректного применения кастомной темы.
+
+```html
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+```
