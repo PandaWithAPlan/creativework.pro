@@ -7,10 +7,23 @@
   const navbarMenu = document.getElementById('navbar-menu');
 
   // Sticky header при скролле
+  let isScrolled = false;
+  let ticking = false;
+
   window.addEventListener('scroll', () => {
     if (!header) return;
-    const offset = window.scrollY || window.pageYOffset;
-    header.classList.toggle('is-scrolled', offset > 16);
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const offset = window.scrollY || window.pageYOffset;
+        const shouldBeScrolled = offset > 16;
+        if (isScrolled !== shouldBeScrolled) {
+          header.classList.toggle('is-scrolled', shouldBeScrolled);
+          isScrolled = shouldBeScrolled;
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
   });
 
   // Мобильное меню
