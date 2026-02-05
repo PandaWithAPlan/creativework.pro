@@ -31,11 +31,12 @@
   /**
    * Простая проверка email через HTML5 API + fallback
    */
+  const testInput = document.createElement('input');
+  testInput.type = 'email';
+
   function isValidEmail(value) {
     if (!value) return false;
     // Используем встроенную валидацию, если есть скрытый input[type=email]
-    const testInput = document.createElement('input');
-    testInput.type = 'email';
     testInput.value = value;
     return testInput.checkValidity();
   }
