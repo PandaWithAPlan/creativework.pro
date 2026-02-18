@@ -70,6 +70,14 @@
     const toggleButtons = pricingToggle.querySelectorAll('.toggle-btn');
     const pricingPrices = pricingGrid.querySelectorAll('.pricing-price');
 
+    // Кэшируем DOM-элементы для оптимизации производительности
+    const cachedPricingData = Array.from(pricingPrices).map((priceBlock) => ({
+      priceBlock,
+      priceValueEl: priceBlock.querySelector('.price-value'),
+      pricePeriodEl: priceBlock.querySelector('.price-period'),
+      priceNoteEl: priceBlock.querySelector('.price-note'),
+    }));
+
     const applyBillingMode = (mode) => {
       // Переключаем визуальное состояние кнопок
       toggleButtons.forEach((btn) => {
@@ -79,11 +87,7 @@
       });
 
       // Обновляем значения в карточках тарифов
-      pricingPrices.forEach((priceBlock) => {
-        const priceValueEl = priceBlock.querySelector('.price-value');
-        const pricePeriodEl = priceBlock.querySelector('.price-period');
-        const priceNoteEl = priceBlock.querySelector('.price-note');
-
+      cachedPricingData.forEach(({ priceBlock, priceValueEl, pricePeriodEl, priceNoteEl }) => {
         if (!priceValueEl || !pricePeriodEl || !priceNoteEl) return;
 
         const monthlyPrice = priceBlock.getAttribute('data-monthly-price');
