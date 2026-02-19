@@ -37,12 +37,12 @@
       mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    // Закрытие меню при клике по ссылке
-    navbarMenu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
+    // Закрытие меню при клике по ссылке (делегирование событий)
+    navbarMenu.addEventListener('click', (event) => {
+      if (event.target.closest('a')) {
         navbarMenu.classList.remove('active');
         mobileToggle.setAttribute('aria-expanded', 'false');
-      });
+      }
     });
   }
 
