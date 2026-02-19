@@ -49,6 +49,13 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
+
+    /* Mobile Menu Styles */
+    @media (max-width: 768px) {
+      #navbar-menu:not(.active) {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body class="font-sans antialiased text-slate-800">
@@ -61,15 +68,19 @@
       <!-- Top Section -->
       <div>
         <!-- Logo -->
-        <div class="mb-10">
+        <div class="mb-10 flex justify-between items-center">
           <a href="index.html" class="text-2xl font-bold tracking-tight text-white hover:text-gray-200 transition">
             CREATIVE WORK<br>PRO HUB
           </a>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none" aria-label="Toggle Menu">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
         </div>
 
         <!-- Navigation -->
         <nav class="mb-12">
-          <ul class="space-y-4 text-lg font-medium">
+          <ul id="navbar-menu" class="space-y-4 text-lg font-medium">
             <li><a href="index.html" class="text-white hover:text-pale transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3"></span>Главная</a></li>
             <li><a href="about.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>О нас</a></li>
             <li><a href="services.html" class="text-gray-300 hover:text-white transition flex items-center group"><span class="w-2 h-2 bg-pale rounded-full mr-3 opacity-0 group-hover:opacity-100 transition"></span>Сервисы</a></li>
