@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Delegation Benchmark</title>
+</head>
+<body>
+    <h1>Benchmark Results</h1>
+    <div id="results">Running...</div>
+    <ul id="list-container"></ul>
+    <script>
+        const COUNT = 50000;
+        const container = document.getElementById('list-container');
+
+        // Helper to clear container and clone to remove old listeners
+        function reset() {
+            const newContainer = container.cloneNode(false);
+            container.parentNode.replaceChild(newContainer, container);
+            return newContainer;
+        }
+
+        // Helper to populate
+        function populate(targetContainer) {
+            const fragment = document.createDocumentFragment();
+            for (let i = 0; i < COUNT; i++) {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = '#';
+                a.textContent = 'Link ' + i;
+                li.appendChild(a);
+                fragment.appendChild(li);
+            }
+            targetContainer.appendChild(fragment);
+        }
+
+        // Benchmark A: Individual Listeners
+        function benchmarkIndividual() {
+            const currentContainer = document.getElementById('list-container');
+            const newContainer = currentContainer.cloneNode(false);
+            currentContainer.parentNode.replaceChild(newContainer, currentContainer);
+            newContainer.id = 'list-container';
+
+            populate(newContainer);
+            const links = newContainer.querySelectorAll('a');
+
+            const start = performance.now();
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // console.log('Clicked individual');
+                });
+            });
+            const end = performance.now();
+            return end - start;
+        }
+
+        // Benchmark B: Delegation
+        function benchmarkDelegation() {
+            const currentContainer = document.getElementById('list-container');
+            const newContainer = currentContainer.cloneNode(false);
+            currentContainer.parentNode.replaceChild(newContainer, currentContainer);
+            newContainer.id = 'list-container';
+
+            populate(newContainer);
+
+            const start = performance.now();
+            newContainer.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    // console.log('Clicked delegation');
+                }
+            });
+            const end = performance.now();
+            return end - start;
+        }
+
+        // Run benchmarks
+        setTimeout(() => {
+            // Warmup
+            benchmarkIndividual();
+            benchmarkDelegation();
+
+            // Actual run
+            const timeA = benchmarkIndividual();
+            const timeB = benchmarkDelegation();
+
+            const results = document.getElementById('results');
+            results.innerHTML = `
+                <p>Items: ${COUNT}</p>
+                <p>Individual Listeners Time: ${timeA.toFixed(4)} ms</p>
+                <p>Delegation Time: ${timeB.toFixed(4)} ms</p>
+                <p>Improvement: ${(timeA / timeB).toFixed(2)}x faster initialization</p>
+            `;
+
+            // Expose results for Playwright
+            window.benchmarkResults = {
+                count: COUNT,
+                individualTime: timeA,
+                delegationTime: timeB
+            };
+        }, 500);
+    </script>
+</body>
+</html>
